@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+  <name>openllet-cli</name>
+  <comment>Openllet is open-source future of Pellet OWL Reasoner. NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
+  <projects>
+    <project>openllet-owlapi</project>
+    <project>openllet-core</project>
+    <project>openllet-functions</project>
+    <project>openllet-query</project>
+    <project>openllet-pellint</project>
+    <project>openllet-jena</project>
+    <project>openllet-modularity</project>
+    <project>openllet-explanation</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+    <buildCommand>
+      <name>org.eclipse.m2e.core.maven2Builder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+    <nature>org.eclipse.m2e.core.maven2Nature</nature>
+  </natures>
+</projectDescription>

@@ -1,0 +1,19 @@
+dist: trusty
+sudo: required
+language: java
+jdk: openjdk8
+
+#addons:
+#  apt:
+#    packages:
+#      - oracle-java8-installer
+
+script: "mvn cobertura:cobertura"
+#script: rm -rf ~/.m2 ; mvn -U dependency:resolve-plugins
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
+branches:
+    only:
+        - integration
