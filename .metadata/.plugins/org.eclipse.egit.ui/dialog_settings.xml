@@ -8,8 +8,14 @@
 		<item value="git.eclipse.org"/>
 		<item value="github.com"/>
 	</list>
+	<list key="CommitDialog.authorValues">
+		<item value="Rita Randazzo &lt;rita.randazzo01@universitadipavia.it&gt;"/>
+	</list>
+	<list key="CommitDialog.committerValues">
+		<item value="Rita Randazzo &lt;rita.randazzo01@universitadipavia.it&gt;"/>
+	</list>
 	<section name="org.eclipse.egit.ui.internal.push.PushResultDialog.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="614"/>
+		<item key="DIALOG_X_ORIGIN" value="508"/>
 		<item key="DIALOG_Y_ORIGIN" value="199"/>
 		<item key="DIALOG_WIDTH" value="700"/>
 		<item key="DIALOG_HEIGHT" value="481"/>
@@ -18,5 +24,12 @@
 			<item value="600"/>
 			<item value="400"/>
 		</list>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
+		<item key="HORIZONTAL_SASH_FORM_WEIGHT" value="200,200"/>
+		<item key="STAGING_SASH_FORM_WEIGHT" value="200,200"/>
+		<item key="sortItemState" value="false"/>
+	</section>
+	<section name="GitCommitMessageComponent">
 	</section>
 </section>

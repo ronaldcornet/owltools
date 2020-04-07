@@ -30,8 +30,12 @@ import openllet.query.sparqldl.jena.SparqlDLExecutionFactory;
 public class ReasonersTest {
 	private static final Logger logger = LogManager.getLogger(Main.class);
 	public static void main(String[] args) {
-		String ont ="C:\\Users\\Rita\\Desktop\\dementia.rdf";
-		String ns = "C:\\Users\\Rita\\Desktop\\DementiaOnto#";
+//		String ont ="C:\\Users\\Rita\\Desktop\\dementia.rdf";
+//		String ns = "C:\\Users\\Rita\\Desktop\\DementiaOnto#";
+		
+		String ont ="C:\\Users\\Rita\\Desktop\\parenthood.owl";
+		String ns = "C:/Users/Rita/Desktop/parenthood.owl#";
+		
 		
 //		String ont ="C:\\Users\\Rita\\Desktop\\wine.rdf";
 //		String ns ="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#";
@@ -61,7 +65,7 @@ public class ReasonersTest {
 		  //validity.getReports() is empty because the model is valid!
 		  
 		  
-		  final String aQuery = "PREFIX proj:<http://www.semanticweb.org/rita/ontologies/2020/1/untitled-ontology-2#> "+
+		  final String aQuery = "PREFIX proj:<"+ns+"> "+
 			  					"SELECT ?s ?p ?o WHERE {"+
 			  					"?s ?p ?o ."+
 			  					"} LIMIT 20";

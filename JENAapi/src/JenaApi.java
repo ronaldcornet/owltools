@@ -18,7 +18,7 @@ public class JenaApi {
 		OntModel base = ModelFactory.createOntologyModel();
 		base.read("C:\\Users\\Rita\\Desktop\\dementia.rdf", "RDF/XML");
 		
-		String NS = "C:\\Users\\Rita\\Desktop\\DementiaOnto#";
+		String NS = "http://www.semanticweb.org/rita/ontologies/2020/1/untitled-ontology-2#";
 		
 		
 		OntClass disease = base.getOntClass(NS+"Disease");
