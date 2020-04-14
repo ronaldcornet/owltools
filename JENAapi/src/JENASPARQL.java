@@ -12,11 +12,8 @@ import org.apache.jena.rdf.model.Literal;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Resource;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 public class JENASPARQL {
-	private static final Logger logger = LogManager.getLogger(Main.class);
 	  public static void main(String[]args)
       {
 		  

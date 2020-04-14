@@ -1,6 +1,5 @@
 import java.io.File;
 
-import org.semanticweb.HermiT.ReasonerFactory;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLClass;
@@ -16,6 +15,7 @@ import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.OWLReasonerConfiguration;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 import org.semanticweb.owlapi.reasoner.SimpleConfiguration;
+import org.semanticweb.HermiT.Reasoner.ReasonerFactory;
 
 public class HermitTest {
 
@@ -38,7 +38,7 @@ public class HermitTest {
 //		r.precomputeInferences(InferenceType.CLASS_HIERARCHY);
 		
 		// get and configure a reasoner (HermiT)
-		OWLReasonerFactory rf = new ReasonerFactory();
+		ReasonerFactory rf = new ReasonerFactory();
 		ConsoleProgressMonitor progressMonitor = new ConsoleProgressMonitor();
 		OWLReasonerConfiguration config = new SimpleConfiguration(progressMonitor);
 		

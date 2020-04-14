@@ -5,7 +5,6 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.semanticweb.HermiT.ReasonerFactory;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.formats.FunctionalSyntaxDocumentFormat;
 import org.semanticweb.owlapi.model.IRI;
@@ -34,6 +33,7 @@ import org.semanticweb.owlapi.util.InferredAxiomGenerator;
 import org.semanticweb.owlapi.util.InferredEquivalentClassAxiomGenerator;
 import org.semanticweb.owlapi.util.InferredOntologyGenerator;
 import org.semanticweb.owlapi.util.InferredSubClassAxiomGenerator;
+import org.semanticweb.HermiT.Reasoner.ReasonerFactory;
 
 import openllet.owlapi.OpenlletReasoner;
 import openllet.owlapi.OpenlletReasonerFactory;
@@ -42,8 +42,8 @@ public class Parenthoodexample {
 
 	public static void main(String[] args) throws OWLOntologyCreationException, OWLOntologyStorageException, MalformedURLException {
 		OWLOntologyManager man = OWLManager.createOWLOntologyManager();
+		//IRI iri = IRI.create("C:\\Users\\Rita\\Desktop\\parenthood.owl");
 		IRI iri = IRI.create("C:\\Users\\Rita\\Desktop\\parenthood.owl");
-		
 		//Create new ontology
 		OWLOntology onto = man.createOntology(iri);
 		OWLOntologyManager outputOntologyManager = OWLManager.createOWLOntologyManager();
@@ -53,7 +53,7 @@ public class Parenthoodexample {
 		/************HERMIT**********************************************************/
 		
 		// get and configure a reasoner (HermiT)
-		OWLReasonerFactory rf = new ReasonerFactory();
+		ReasonerFactory rf = new ReasonerFactory();
 		ConsoleProgressMonitor progressMonitor = new ConsoleProgressMonitor();
 		OWLReasonerConfiguration config = new SimpleConfiguration(progressMonitor);
 		

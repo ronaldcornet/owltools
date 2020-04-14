@@ -11,8 +11,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/OWL"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/HermiT"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Openllet"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Owllink"/>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">

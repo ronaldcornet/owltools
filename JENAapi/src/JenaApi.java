@@ -7,11 +7,8 @@ import org.apache.jena.ontology.OntModel;
 import org.apache.jena.ontology.OntModelSpec;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Resource;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 public class JenaApi {
-	private static final Logger logger = LogManager.getLogger(Main.class);
 
 	public static void main(String[] args) {
 		

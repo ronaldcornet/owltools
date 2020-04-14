@@ -13,8 +13,6 @@ import org.apache.jena.rdf.model.Literal;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Resource;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
 import org.apache.jena.rdf.model.InfModel;
 import org.apache.jena.reasoner.ValidityReport;
@@ -28,7 +26,6 @@ import openllet.query.sparqldl.jena.SparqlDLExecutionFactory;
 
 
 public class ReasonersTest {
-	private static final Logger logger = LogManager.getLogger(Main.class);
 	public static void main(String[] args) {
 //		String ont ="C:\\Users\\Rita\\Desktop\\dementia.rdf";
 //		String ns = "C:\\Users\\Rita\\Desktop\\DementiaOnto#";
