@@ -13,9 +13,9 @@ import org.apache.jena.rdf.model.Resource;
 public class JenaAPITest {
 
 	public static void main(String[] args) { 
-		
-		String NS = "C:\\Users\\Rita\\Desktop\\dementia.owl#";
-		String SOURCE = "C:\\Users\\Rita\\Desktop\\dementia.owl";
+		//how to get NS annotation???
+		String NS = args[0]+"#"; ///"C:\\Users\\Rita\\Desktop\\dementia.owl#";
+		String SOURCE = args[0];// "C:\\Users\\Rita\\Desktop\\dementia.owl";
 		OntModel base = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM);
 		base.read(SOURCE, "OWL");
 		System.out.println( "file letto");

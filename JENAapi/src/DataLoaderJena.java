@@ -13,8 +13,9 @@ import org.apache.jena.util.FileManager;
 
 
 public class DataLoaderJena {
-	  static final String inputFileName = "C:\\Users\\Rita\\Desktop\\dementia.owl";
+	  
 	  public static void main(String[]args) throws FileNotFoundException {
+		String inputFileName = args[0];    /// "C:\\Users\\Rita\\Desktop\\dementia.owl";
 		//create an empty ontology model
 		 OntDocumentManager mgr = new OntDocumentManager();
 		 OntModelSpec s = new OntModelSpec(OntModelSpec.OWL_MEM);

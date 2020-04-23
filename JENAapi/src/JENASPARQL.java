@@ -16,16 +16,13 @@ import org.apache.jena.rdf.model.Resource;
 public class JENASPARQL {
 	  public static void main(String[]args)
       {
-		  
-		  ///String SOURCE = "C:\\Users\\Rita\\Desktop\\wine.rdf";
-		  String SOURCE = "C:\\Users\\Rita\\Desktop\\dementia.rdf";
+		  String SOURCE = args[0]; //"C:\\Users\\Rita\\Desktop\\dementia.rdf or C:\\Users\\Rita\\Desktop\\wine.rdf";
 		  
 		  
 		  OntModel model = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM);
 		  model.read(SOURCE, "RDF/XML");
 		  
-		  String queryString = "PREFIX proj:<http://www.semanticweb.org/rita/ontologies/2020/1/untitled-ontology-2#> "
-		  		+ "SELECT ?s ?p ?o WHERE {"+
+		  String queryString =  "SELECT ?s ?p ?o WHERE {"+
                   "?s ?p ?o ."+
                   "} LIMIT 20";
 		

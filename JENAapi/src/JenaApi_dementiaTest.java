@@ -8,7 +8,7 @@ import org.apache.jena.ontology.OntModelSpec;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Resource;
 
-public class JenaApi {
+public class JenaApi_dementiaTest {
 
 	public static void main(String[] args) {
 		

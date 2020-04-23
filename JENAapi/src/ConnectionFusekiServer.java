@@ -15,22 +15,6 @@ import org.apache.jena.rdf.model.RDFNode;
 
 public class ConnectionFusekiServer {
 	
-	public static void uploadRDF(File rdf, String serviceURI)
-			throws IOException {
-
-		// parse the file
-		OntModel m = ModelFactory.createOntologyModel();
-		try (FileInputStream in = new FileInputStream(rdf)) {
-			m.read(in, null, "RDF/XML");
-		}
-
-		// upload the resulting model
-		DatasetAccessor accessor = DatasetAccessorFactory
-				.createHTTP(serviceURI);
-		accessor.putModel(m);
-	}
-
-	
 	public static void execSelectAndPrint(String serviceURI, String query) {
 		QueryExecution q = QueryExecutionFactory.sparqlService(serviceURI,
 				query);
@@ -67,14 +51,12 @@ public class ConnectionFusekiServer {
 	}
 
 	public static void main(String[] args) {
-		// uploadRDF(new File("C:\\Users\\Rita\\Desktop\\dementia.rdf"),"http://localhost:8080/fuseki/Dementia_ont" );
+		String connection = args[0]; //"http://localhost:8080/fuseki/Dementia_onto",
+		String query = args[1];      //"SELECT ?s ?p ?o WHERE { ?s ?p ?o .} LIMIT 10"
 				execSelectAndPrint(
-						"http://localhost:8080/fuseki/Dementia_onto",
-						"SELECT ?s ?p ?o WHERE { ?s ?p ?o .} LIMIT 10");
+						connection,
+						query);
 
-				execSelectAndProcess(
-						"http://localhost:8080/fuseki/Dementia_onto",
-						"SELECT ?s ?p ?o WHERE { ?s ?p ?o .} LIMIT 10");
 	}
 }
 

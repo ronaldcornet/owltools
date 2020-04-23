@@ -13,18 +13,38 @@
 	
 	<dependency>
     <groupId>net.sourceforge.owlapi</groupId>
-    <artifactId>owlapi-api</artifactId>
+    <artifactId>owlapi-apibinding</artifactId>
     <version>5.1.13</version>
 </dependency>
-	
-	
+
 	<dependency>
 	    <groupId>net.sourceforge.owlapi</groupId>
 	    <artifactId>org.semanticweb.hermit</artifactId>
 	    <version>1.3.8.500</version>
-</dependency>
-	
-</dependencies>
+	</dependency>
+	<dependency>
+	    <groupId>net.sourceforge.owlapi</groupId>
+	    <artifactId>jfact</artifactId>
+	    <version>5.0.3</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.semanticweb.elk</groupId>
+	    <artifactId>elk-owlapi5</artifactId>
+	    <version>0.5.0-SNAPSHOT</version>
+	</dependency>
+  </dependencies>
+  <repositories>
+   <repository>
+      <id>sonatype-nexus-snapshots</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+      <releases>
+         <enabled>false</enabled>
+      </releases>
+      <snapshots>
+         <enabled>true</enabled>
+      </snapshots>
+   </repository>
+</repositories>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>

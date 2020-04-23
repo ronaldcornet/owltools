@@ -40,10 +40,11 @@ public class Parenthood_jenaServer {
 	}
 
 	public static void main(String[] args) {
-		
+	String connection = args[0]; //"http://localhost:8080/fuseki/Parenthood"
+	String query = args[1]; //SELECT ?s ?p ?o WHERE { ?s ?p ?o .} LIMIT 10
 	ResultSet results =		execSelectAndPrint(
-						"http://localhost:8080/fuseki/Parenthood",
-						"SELECT ?s ?p ?o WHERE { ?s ?p ?o .} LIMIT 10");
+						connection,
+						query);
 	
 		
 	}

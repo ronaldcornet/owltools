@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.apache.jena.vocabulary.RDFS"/>
-<fullyQualifiedTypeName name="java.util.Iterator"/>
-<fullyQualifiedTypeName name="org.apache.jena.reasoner.ValidityReport.Report"/>
-<fullyQualifiedTypeName name="openllet.query.sparqldl.jena.SparqlDLExecutionFactory"/>
-<fullyQualifiedTypeName name="org.apache.jena.query.QueryExecution"/>
-<fullyQualifiedTypeName name="org.apache.jena.query.QueryFactory"/>
 <fullyQualifiedTypeName name="org.apache.jena.query.ResultSet"/>
 <fullyQualifiedTypeName name="org.apache.jena.query.ResultSetFormatter"/>
 <fullyQualifiedTypeName name="org.semanticweb.owlapi.reasoner.NodeSet"/>
 <fullyQualifiedTypeName name="org.semanticweb.owlapi.reasoner.Node"/>
 <fullyQualifiedTypeName name="openllet.owlapi.OpenlletReasoner"/>
 <fullyQualifiedTypeName name="openllet.owlapi.OpenlletReasonerFactory"/>
-<fullyQualifiedTypeName name="org.semanticweb.owlapi.model.OWLClass"/>
 <fullyQualifiedTypeName name="java.net.URL"/>
 <fullyQualifiedTypeName name="org.semanticweb.owlapi.model.OWLOntologyCreationException"/>
 <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
@@ -24,15 +17,12 @@
 <fullyQualifiedTypeName name="org.semanticweb.owlapi.model.OWLObjectProperty"/>
 <fullyQualifiedTypeName name="org.semanticweb.owlapi.io.OWLXMLOntologyFormat"/>
 <fullyQualifiedTypeName name="org.eclipse.rdf4j.model.URI"/>
-<fullyQualifiedTypeName name="java.net.URI"/>
 <fullyQualifiedTypeName name="org.semanticweb.owlapi.model.OWLNamedIndividual"/>
 <fullyQualifiedTypeName name="org.semanticweb.owlapi.model.OWLOntologyManager"/>
 <fullyQualifiedTypeName name="org.semanticweb.owlapi.apibinding.OWLManager"/>
 <fullyQualifiedTypeName name="org.semanticweb.owlapi.model.OWLOntology"/>
 <fullyQualifiedTypeName name="org.semanticweb.owlapi.model.IRI"/>
 <fullyQualifiedTypeName name="org.semanticweb.owlapi.model.OWLDataFactory"/>
-<fullyQualifiedTypeName name="org.semanticweb.HermiT.Configuration"/>
-<fullyQualifiedTypeName name="org.semanticweb.HermiT.ReasonerFactory"/>
 <fullyQualifiedTypeName name="org.semanticweb.owlapi.reasoner.OWLReasoner"/>
 <fullyQualifiedTypeName name="org.semanticweb.owlapi.reasoner.InferenceType"/>
 <fullyQualifiedTypeName name="java.util.List"/>
@@ -60,4 +50,14 @@
 <fullyQualifiedTypeName name="org.semanticweb.HermiT.Reasoner.ReasonerFactory"/>
 <fullyQualifiedTypeName name="org.semanticweb.owlapi.owllink.builtin.response.Configuration"/>
 <fullyQualifiedTypeName name="org.semanticweb.owlapi.reasoner.OWLReasonerFactory"/>
+<fullyQualifiedTypeName name="org.semanticweb.HermiT.Configuration"/>
+<fullyQualifiedTypeName name="org.semanticweb.HermiT.ReasonerFactory"/>
+<fullyQualifiedTypeName name="org.semanticweb.owlapi.model.OWLClass"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="java.net.URI"/>
+<fullyQualifiedTypeName name="org.apache.jena.ontology.OntClass"/>
+<fullyQualifiedTypeName name="org.semanticweb.owlapi.reasoner.ReasonerProgressMonitor"/>
+<fullyQualifiedTypeName name="org.semanticweb.owlapi.reasoner.TimedConsoleProgressMonitor"/>
+<fullyQualifiedTypeName name="uk.ac.manchester.cs.jfact.JFactFactory"/>
+<fullyQualifiedTypeName name="org.semanticweb.owlapi.owllink.OWLlinkReasoner"/>
 </qualifiedTypeNameHistroy>
