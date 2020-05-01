@@ -13,11 +13,13 @@ import org.apache.jena.rdf.model.Resource;
 public class JenaAPITest {
 
 	public static void main(String[] args) { 
-		//how to get NS annotation???
-		String NS = args[0]+"#"; ///"C:\\Users\\Rita\\Desktop\\dementia.owl#";
+		
 		String SOURCE = args[0];// "C:\\Users\\Rita\\Desktop\\dementia.owl";
 		OntModel base = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM);
 		base.read(SOURCE, "OWL");
+		
+		String NS = base.getNsPrefixURI("");
+		
 		System.out.println( "file letto");
 		OntModel inf = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_RULE_INF,base);
 		System.out.println( "onotlogy model creato");

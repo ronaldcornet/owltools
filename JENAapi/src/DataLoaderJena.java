@@ -29,8 +29,9 @@ public class DataLoaderJena {
 		 m.read(in,"");
 		 
 		 //source
-		 String SOURCE  = "C:\\Users\\Rita\\Desktop\\dementia-empty.owl";
-		 String NS      = "http://www.semanticweb.org/rita/ontologies/2020/1/untitled-ontology-2#";
+		 String SOURCE  = args[1];   //"C:\\Users\\Rita\\Desktop\\dementia-empty.owl";
+		 
+		 String NS      = m.getNsPrefixURI("");
 		 
 		 /*********************CLASSES***************************************/
 		 //disease

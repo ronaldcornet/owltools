@@ -19,11 +19,11 @@ import openllet.query.sparqldl.jena.SparqlDLExecutionFactory;
 public class Parenthoodexample_newcode_jena {
 	public static void main(String[] args) throws Exception {
 		
-		String NS = "C:/Users/Rita/Desktop/parenthood.owl#";
-		String SOURCE = "C:\\Users\\Rita\\Desktop\\parenthood.owl";
+		
+		String SOURCE = args[0]; //"C:\\Users\\Rita\\Desktop\\parenthood.owl";
 		OntModel ontology = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM);
 		ontology.read(SOURCE, "OWL");
-	
+		String NS = ontology.getNsPrefixURI("");
 	    List<OntClass> classes = ontology.listClasses().toList();
 	    
 	    //test for correctly uploading ontology
@@ -56,7 +56,7 @@ public class Parenthoodexample_newcode_jena {
 		  
 		  final String aQuery = "PREFIX proj:<"+NS+"> "+
 			  					"SELECT ?s ?p ?o WHERE {"+
-			  					" proj:filippo ?p ?o ."+
+			  					" proj:maria ?p ?o ."+
 			  					"} LIMIT 20";
 		  final QueryExecution qe = SparqlDLExecutionFactory.create(QueryFactory.create(aQuery), model);
 		  final ResultSet results = qe.execSelect();

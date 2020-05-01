@@ -27,15 +27,12 @@ import openllet.query.sparqldl.jena.SparqlDLExecutionFactory;
 
 public class ReasonersTest {
 	public static void main(String[] args) {
-//		String ont ="C:\\Users\\Rita\\Desktop\\dementia.rdf";
-//		String ns = "C:\\Users\\Rita\\Desktop\\DementiaOnto#";
+//		String ont ="C:\\Users\\Rita\\Desktop\\dementia.rdf";//		String ns = "C:\\Users\\Rita\\Desktop\\DementiaOnto#";
 		
 		String ont =args[0];//"C:\\Users\\Rita\\Desktop\\parenthood.owl";
-		String ns = "C:/Users/Rita/Desktop/parenthood.owl#";
 		
 		
-//		String ont ="C:\\Users\\Rita\\Desktop\\wine.rdf";
-//		String ns ="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#";
+//		String ont ="C:\\Users\\Rita\\Desktop\\wine.rdf";		String ns ="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#";
 		final PelletReasoner aReasoner = PelletReasonerFactory.theInstance().create();
 
 		
@@ -46,8 +43,8 @@ public class ReasonersTest {
 		  final InfModel model = ModelFactory.createInfModel(aReasoner, emptyModel);
 		  // read the file
 		  model.read(ont);
-		  
-		  
+		  String ns = model.getNsPrefixURI("");
+
 		  final ValidityReport validity = model.validate(); //Test the consistency of the underlying data.		  
 		  if (validity.isValid())
 			  System.out.println("OK");

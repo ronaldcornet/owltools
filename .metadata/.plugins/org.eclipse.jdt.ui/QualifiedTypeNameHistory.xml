@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.apache.jena.query.ResultSet"/>
-<fullyQualifiedTypeName name="org.apache.jena.query.ResultSetFormatter"/>
-<fullyQualifiedTypeName name="org.semanticweb.owlapi.reasoner.NodeSet"/>
-<fullyQualifiedTypeName name="org.semanticweb.owlapi.reasoner.Node"/>
 <fullyQualifiedTypeName name="openllet.owlapi.OpenlletReasoner"/>
 <fullyQualifiedTypeName name="openllet.owlapi.OpenlletReasonerFactory"/>
 <fullyQualifiedTypeName name="java.net.URL"/>
@@ -60,4 +56,8 @@
 <fullyQualifiedTypeName name="org.semanticweb.owlapi.reasoner.TimedConsoleProgressMonitor"/>
 <fullyQualifiedTypeName name="uk.ac.manchester.cs.jfact.JFactFactory"/>
 <fullyQualifiedTypeName name="org.semanticweb.owlapi.owllink.OWLlinkReasoner"/>
+<fullyQualifiedTypeName name="org.semanticweb.owlapi.model.OWLAnnotation"/>
+<fullyQualifiedTypeName name="org.apache.jena.rdf.model.Model"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="org.semanticweb.owlapi.model.OWLOntologyFormat"/>
 </qualifiedTypeNameHistroy>

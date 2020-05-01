@@ -9,6 +9,7 @@ import org.apache.jena.query.QuerySolution;
 import org.apache.jena.query.ResultSet;
 import org.apache.jena.query.ResultSetFormatter;
 import org.apache.jena.rdf.model.Literal;
+import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Resource;
@@ -17,10 +18,13 @@ public class JENASPARQL {
 	  public static void main(String[]args)
       {
 		  String SOURCE = args[0]; //"C:\\Users\\Rita\\Desktop\\dementia.rdf or C:\\Users\\Rita\\Desktop\\wine.rdf";
+		  	
+		
 		  
-		  
-		  OntModel model = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM);
+		  Model model = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM);
 		  model.read(SOURCE, "RDF/XML");
+		  //print namespace, it could be used as prefix into the query
+		  System.out.println(model.getNsPrefixURI(""));
 		  
 		  String queryString =  "SELECT ?s ?p ?o WHERE {"+
                   "?s ?p ?o ."+

@@ -6,6 +6,7 @@ import java.io.OutputStream;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import org.semanticweb.HermiT.Configuration;
@@ -19,6 +20,7 @@ import org.semanticweb.owlapi.model.OWLDataFactory;
 import org.semanticweb.owlapi.model.OWLIndividualAxiom;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
+import org.semanticweb.owlapi.model.OWLOntologyFormat;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
 import org.semanticweb.owlapi.owllink.OWLlinkHTTPXMLReasonerFactory;
@@ -56,17 +58,18 @@ public class ParenthoodExample_optimized {
 	    OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
 	    File file = new File(args[0]);
 	    OWLOntology ontology = manager.loadOntologyFromOntologyDocument(file);
+	    System.out.println("axioms before reasoner" +ontology.getAxiomCount());
 	    Set<OWLClass> classes = ontology.getClassesInSignature();
 	    
 
 	    String inferredFile = args[1];
 	    //test for correctly uploading ontology
-	    for(OWLClass clas : classes) {
-        	System.out.println(clas);}
+//	    for(OWLClass clas : classes) {
+//        	System.out.println(clas);}
 	    OWLDataFactory df = manager.getOWLDataFactory();
 
-	    Reasoner hermit = Reasoner.HERMIT;
-	    System.out.println(RunReasoner(hermit, df,ontology,manager,inferredFile));
+//	    Reasoner hermit = Reasoner.HERMIT;
+//	    System.out.println(RunReasoner(hermit, df,ontology,manager,inferredFile));
 	    
 //	    
 //	    Reasoner openllet = Reasoner.PELLET;
@@ -75,12 +78,12 @@ public class ParenthoodExample_optimized {
 //	    Reasoner konclude = Reasoner.KONCLUDE;
 //	    System.out.println(RunReasoner(konclude, df,ontology,manager,inferredFile));
 //	    
-//	    Reasoner elk = Reasoner.ELK;
-//	    System.out.println(RunReasoner(elk, df,ontology,manager,inferredFile));
+	    Reasoner elk = Reasoner.ELK;
+	    System.out.println(RunReasoner(elk, df,ontology,manager,inferredFile));
 //	    
 //	    Reasoner jfact = Reasoner.JFACT;
 //	    System.out.println(RunReasoner(jfact, df,ontology,manager,inferredFile));
-	    
+//	    
 
 	
 	}
@@ -107,6 +110,7 @@ public class ParenthoodExample_optimized {
 		    configuration.reasonerProgressMonitor = progressMonitor;
 		    configuration.ignoreUnsupportedDatatypes = true;
 		    reasoner_object = rf.createReasoner(ontology, configuration);
+		    
 		   
 		}
 		else if(reasoner == Reasoner.KONCLUDE) {
@@ -172,9 +176,11 @@ public class ParenthoodExample_optimized {
 			        generators.addAll(individualAxioms);
 
 			        generators.add(new InferredDisjointClassesAxiomGenerator());
-			        InferredOntologyGenerator iog = new InferredOntologyGenerator(reasoner_object, generators);
+			        InferredOntologyGenerator iog = new InferredOntologyGenerator(reasoner_object, generators); //Generates an ontology based on inferred axioms which are essentially supplied by a reasoner
+			        
 			        OWLOntology inferredAxiomsOntology = manager.createOntology();
 			        iog.fillOntology(df, inferredAxiomsOntology);
+			        System.out.println("numero inferred axioms "  + inferredAxiomsOntology.getAxiomCount());
 //			        for(InferredAxiomGenerator<?> i : iog.getAxiomGenerators()) {
 //			        	System.out.println(i);}
 			        File inferredOntologyFile = new File(inferredFile);
@@ -184,6 +190,7 @@ public class ParenthoodExample_optimized {
 			            manager.saveOntology(inferredAxiomsOntology, outputStream);
 			        }
 			        esito = "done "+ reasoner.toString();
+			        reasoner_object.dispose();
 			    } // End if consistencyCheck
 			    else {
 			        esito = reasoner.toString() +" -- Inconsistent input Ontology, Please check the OWL File";
