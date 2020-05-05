@@ -12,6 +12,18 @@
 	</dependency>
 	
 	<dependency>
+	    <groupId>uk.ac.manchester.cs</groupId>
+	    <artifactId>factplusplus</artifactId>
+	    <version>1.5.2</version>
+	</dependency>
+
+	<dependency>
+	    <groupId>au.csiro</groupId>
+	    <artifactId>snorocket-owlapi</artifactId>
+	    <version>4.0.1</version>
+	</dependency>
+	
+	<dependency>
     <groupId>net.sourceforge.owlapi</groupId>
     <artifactId>owlapi-apibinding</artifactId>
     <version>5.1.13</version>

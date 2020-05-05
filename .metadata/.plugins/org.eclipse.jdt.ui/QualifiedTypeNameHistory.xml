@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="openllet.owlapi.OpenlletReasoner"/>
-<fullyQualifiedTypeName name="openllet.owlapi.OpenlletReasonerFactory"/>
 <fullyQualifiedTypeName name="java.net.URL"/>
 <fullyQualifiedTypeName name="org.semanticweb.owlapi.model.OWLOntologyCreationException"/>
 <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
@@ -60,4 +58,6 @@
 <fullyQualifiedTypeName name="org.apache.jena.rdf.model.Model"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="org.semanticweb.owlapi.model.OWLOntologyFormat"/>
+<fullyQualifiedTypeName name="org.apache.commons.io.FilenameUtils"/>
+<fullyQualifiedTypeName name="au.csiro.snorocket.owlapi.SnorocketReasonerFactory"/>
 </qualifiedTypeNameHistroy>
