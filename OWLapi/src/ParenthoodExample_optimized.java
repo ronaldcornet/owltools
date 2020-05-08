@@ -33,6 +33,7 @@ import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 import org.semanticweb.owlapi.reasoner.ReasonerProgressMonitor;
 import org.semanticweb.owlapi.reasoner.SimpleConfiguration;
 import org.semanticweb.owlapi.reasoner.TimedConsoleProgressMonitor;
+import org.semanticweb.owlapi.reasoner.structural.StructuralReasonerFactory;
 import org.semanticweb.owlapi.util.InferredAxiomGenerator;
 import org.semanticweb.owlapi.util.InferredClassAssertionAxiomGenerator;
 import org.semanticweb.owlapi.util.InferredDataPropertyCharacteristicAxiomGenerator;
@@ -70,19 +71,22 @@ public class ParenthoodExample_optimized {
 //        	System.out.println(clas);}
 	    OWLDataFactory df = manager.getOWLDataFactory();
 
-	    Reasoner hermit = Reasoner.HERMIT;
-	    System.out.println(RunReasoner(hermit, df,ontology,manager,filename));
+//	    Reasoner hermit = Reasoner.HERMIT;
+//	    System.out.println(RunReasoner(hermit, df,ontology,manager,filename));
 	    
-	    
-	    Reasoner openllet = Reasoner.PELLET;
-	    System.out.println(RunReasoner(openllet, df,ontology,manager,filename));
+//	    Reasoner Structural = Reasoner.Structural;
+//	    System.out.println(RunReasoner(Structural, df,ontology,manager,filename));
+//	    
+//	    
+//	    Reasoner openllet = Reasoner.PELLET;
+//	    System.out.println(RunReasoner(openllet, df,ontology,manager,filename));
 	    
 //	    Reasoner konclude = Reasoner.KONCLUDE;
 //	    System.out.println(RunReasoner(konclude, df,ontology,manager,filename));
-	    
-	    Reasoner elk = Reasoner.ELK;
-	    System.out.println(RunReasoner(elk, df,ontology,manager,filename));
-	    
+//	    
+//	    Reasoner elk = Reasoner.ELK;
+//	    System.out.println(RunReasoner(elk, df,ontology,manager,filename));
+//	    
 	    Reasoner jfact = Reasoner.JFACT;
 	    System.out.println(RunReasoner(jfact, df,ontology,manager,filename));
 	    
@@ -93,13 +97,13 @@ public class ParenthoodExample_optimized {
 	
 	//CREATE AN ENUM REASONER
 	public enum Reasoner{
+		Structural,
 		HERMIT, 
 		PELLET, 
 		KONCLUDE,
 		JFACT,
 		FACT,
-		ELK,
-		SNOROCKET
+		ELK
 		
 	}
 	public static String RunReasoner(Reasoner reasoner, OWLDataFactory df, OWLOntology ontology, OWLOntologyManager manager, String filename) throws OWLOntologyCreationException, FileNotFoundException, IOException, OWLOntologyStorageException {
@@ -116,6 +120,15 @@ public class ParenthoodExample_optimized {
 		    reasoner_object = rf.createReasoner(ontology, configuration);
 		    
 		   
+		}
+		else if(reasoner == Reasoner.Structural) {
+			
+			StructuralReasonerFactory rf = new StructuralReasonerFactory();
+		    TimedConsoleProgressMonitor progressMonitor = new TimedConsoleProgressMonitor();
+		    Configuration configuration = new Configuration();
+		    configuration.reasonerProgressMonitor = progressMonitor;
+		    configuration.ignoreUnsupportedDatatypes = true;
+		    reasoner_object = rf.createReasoner(ontology, configuration);
 		}
 		else if(reasoner == Reasoner.KONCLUDE) {
 			
@@ -155,13 +168,13 @@ public class ParenthoodExample_optimized {
 			    	reasoner_object.flush(); //Flushes any changes stored in the buffer, which causes the reasoner to take into consideration the changes the current root ontology specified by the changes. FROM RONALD's CODE
 			        List<InferredAxiomGenerator<? extends OWLAxiom>> generators = new ArrayList<>();
 			        generators.add(new InferredSubClassAxiomGenerator());
-			        generators.add(new InferredClassAssertionAxiomGenerator());
-			        generators.add(new InferredDataPropertyCharacteristicAxiomGenerator());
-			        generators.add(new InferredEquivalentClassAxiomGenerator());
-			        generators.add(new InferredEquivalentDataPropertiesAxiomGenerator());
-			        generators.add(new InferredEquivalentObjectPropertyAxiomGenerator());
-			        generators.add(new InferredInverseObjectPropertiesAxiomGenerator());
-			        generators.add(new InferredObjectPropertyCharacteristicAxiomGenerator());
+//			        generators.add(new InferredClassAssertionAxiomGenerator());
+//			        generators.add(new InferredDataPropertyCharacteristicAxiomGenerator());
+//			        generators.add(new InferredEquivalentClassAxiomGenerator());
+//			        generators.add(new InferredEquivalentDataPropertiesAxiomGenerator());
+//			        generators.add(new InferredEquivalentObjectPropertyAxiomGenerator());
+//			        generators.add(new InferredInverseObjectPropertiesAxiomGenerator());
+//			        generators.add(new InferredObjectPropertyCharacteristicAxiomGenerator());
 
 			        // NOTE: InferredPropertyAssertionGenerator significantly slows down
 			        // inference computation
@@ -173,16 +186,16 @@ public class ParenthoodExample_optimized {
 			        List<InferredIndividualAxiomGenerator<? extends OWLIndividualAxiom>> individualAxioms =
 			            new ArrayList<>();
 			        generators.addAll(individualAxioms);
-
+			        System.out.println("quasi finito");
 			        generators.add(new InferredDisjointClassesAxiomGenerator());
 			        InferredOntologyGenerator iog = new InferredOntologyGenerator(reasoner_object, generators); //Generates an ontology based on inferred axioms which are essentially supplied by a reasoner
-			        
 			        OWLOntology inferredAxiomsOntology = manager.createOntology();
 			        iog.fillOntology(df, inferredAxiomsOntology);
+			        System.out.println("quasi finito manca solo il file");
 			        System.out.println("numero inferred axioms "  + inferredAxiomsOntology.getAxiomCount());
 //			        for(InferredAxiomGenerator<?> i : iog.getAxiomGenerators()) {
 //			        	System.out.println(i);}
-			        File inferredOntologyFile = new File(filename+"inferred_"+reasoner.toString()+".owl");
+			        File inferredOntologyFile = new File(FilenameUtils.removeExtension(filename)+"inferred"+reasoner.toString()+".owl");
 			        System.out.println(inferredOntologyFile);
 			        // Now we create a stream since the ontology manager can then write to that stream.
 			        try (OutputStream outputStream = new FileOutputStream(inferredOntologyFile)) {

@@ -4545,3 +4545,82 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact uk.ac.manches
 2020-05-04 23:04:10,596 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\main\resources
 2020-05-04 23:04:10,597 [Worker-53: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2020-05-04 23:04:10,598 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\test\resources
+2020-05-05 09:27:32,350 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-05-05 09:27:58,427 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for uk.ac.manchester.cs:factplusplus:jar:1.5.2 is missing, no dependency information available
+2020-05-05 09:28:00,742 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-05 09:28:00,744 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\main\resources
+2020-05-05 09:28:00,746 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-05 09:28:00,747 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\test\resources
+2020-05-05 12:08:18,182 [Worker-1: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for uk.ac.manchester.cs:factplusplus:jar:1.5.2 is missing, no dependency information available
+2020-05-05 12:08:20,576 [Worker-1: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-05 12:08:20,578 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\main\resources
+2020-05-05 12:08:20,582 [Worker-1: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-05 12:08:20,583 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\test\resources
+2020-05-05 12:11:03,503 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-05-05 12:14:27,407 [Worker-23: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: OWLapi:OWLapi:0.0.1-SNAPSHOT @ C:\Users\Rita\git\structura\OWLapi\pom.xml.
+2020-05-05 12:14:30,110 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-05 12:14:30,111 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\main\resources
+2020-05-05 12:14:30,113 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-05 12:14:30,114 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\test\resources
+2020-05-05 12:14:34,786 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-05 12:14:34,787 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\main\resources
+2020-05-05 12:14:34,789 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-05 12:14:34,790 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\test\resources
+2020-05-06 17:52:19,470 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-05-06 17:56:07,495 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-06 17:56:07,496 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\main\resources
+2020-05-06 17:56:07,498 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-06 17:56:07,499 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\test\resources
+2020-05-06 17:58:01,423 [Worker-25: Launching ParenthoodExample_optimized] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-06 17:58:01,425 [Worker-25: Launching ParenthoodExample_optimized] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\main\resources
+2020-05-06 17:58:01,427 [Worker-25: Launching ParenthoodExample_optimized] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-06 17:58:01,428 [Worker-25: Launching ParenthoodExample_optimized] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\test\resources
+2020-05-06 17:59:00,709 [Worker-21: Launching ParenthoodExample_optimized] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-06 17:59:00,710 [Worker-21: Launching ParenthoodExample_optimized] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\main\resources
+2020-05-06 17:59:00,711 [Worker-21: Launching ParenthoodExample_optimized] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-06 17:59:00,712 [Worker-21: Launching ParenthoodExample_optimized] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\test\resources
+2020-05-06 18:02:04,071 [Worker-29: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-06 18:02:04,072 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\main\resources
+2020-05-06 18:02:04,073 [Worker-29: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-06 18:02:04,075 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\test\resources
+2020-05-06 18:02:59,881 [Worker-30: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-06 18:02:59,883 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\main\resources
+2020-05-06 18:02:59,884 [Worker-30: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-06 18:02:59,886 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\test\resources
+2020-05-07 10:24:49,519 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-05-07 10:39:20,293 [Worker-18: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-07 10:39:20,295 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\main\resources
+2020-05-07 10:39:20,297 [Worker-18: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-07 10:39:20,298 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\test\resources
+2020-05-07 17:54:26,717 [Worker-151: Launching ParenthoodExample_optimized] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-07 17:54:26,719 [Worker-151: Launching ParenthoodExample_optimized] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\main\resources
+2020-05-07 17:54:26,721 [Worker-151: Launching ParenthoodExample_optimized] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-07 17:54:26,722 [Worker-151: Launching ParenthoodExample_optimized] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\test\resources
+2020-05-07 18:16:06,731 [Worker-162: Launching ParenthoodExample_optimized] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-07 18:16:06,733 [Worker-162: Launching ParenthoodExample_optimized] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\main\resources
+2020-05-07 18:16:06,735 [Worker-162: Launching ParenthoodExample_optimized] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-07 18:16:06,738 [Worker-162: Launching ParenthoodExample_optimized] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\test\resources
+2020-05-07 18:59:18,858 [Worker-162: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-07 18:59:18,859 [Worker-162: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\main\resources
+2020-05-07 18:59:18,861 [Worker-162: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-07 18:59:18,862 [Worker-162: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\test\resources
+2020-05-07 19:02:52,133 [Worker-179: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-07 19:02:52,134 [Worker-179: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\main\resources
+2020-05-07 19:02:52,135 [Worker-179: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-07 19:02:52,136 [Worker-179: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\test\resources
+2020-05-07 19:33:09,583 [Worker-190: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-07 19:33:09,584 [Worker-190: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\main\resources
+2020-05-07 19:33:09,587 [Worker-190: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-07 19:33:09,588 [Worker-190: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\test\resources
+2020-05-07 19:36:03,540 [Worker-191: Launching ParenthoodExample_optimized] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-07 19:36:03,542 [Worker-191: Launching ParenthoodExample_optimized] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\main\resources
+2020-05-07 19:36:03,544 [Worker-191: Launching ParenthoodExample_optimized] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-07 19:36:03,545 [Worker-191: Launching ParenthoodExample_optimized] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\test\resources
+2020-05-08 11:40:44,893 [Worker-176: Launching ParenthoodExample_optimized] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-08 11:40:44,895 [Worker-176: Launching ParenthoodExample_optimized] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\main\resources
+2020-05-08 11:40:44,897 [Worker-176: Launching ParenthoodExample_optimized] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-08 11:40:44,898 [Worker-176: Launching ParenthoodExample_optimized] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\test\resources
+2020-05-08 12:00:09,210 [Worker-297: Launching ParenthoodExample_optimized] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-08 12:00:09,212 [Worker-297: Launching ParenthoodExample_optimized] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\main\resources
+2020-05-08 12:00:09,213 [Worker-297: Launching ParenthoodExample_optimized] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-05-08 12:00:09,214 [Worker-297: Launching ParenthoodExample_optimized] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\git\structura\OWLapi\src\test\resources
