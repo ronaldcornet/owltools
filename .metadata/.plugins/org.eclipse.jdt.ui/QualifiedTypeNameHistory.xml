@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.net.URL"/>
 <fullyQualifiedTypeName name="org.semanticweb.owlapi.model.OWLOntologyCreationException"/>
 <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
 <fullyQualifiedTypeName name="org.semanticweb.owlapi.owllink.OWLlinkHTTPXMLReasonerFactory"/>
@@ -60,4 +59,5 @@
 <fullyQualifiedTypeName name="org.semanticweb.owlapi.model.OWLOntologyFormat"/>
 <fullyQualifiedTypeName name="org.apache.commons.io.FilenameUtils"/>
 <fullyQualifiedTypeName name="au.csiro.snorocket.owlapi.SnorocketReasonerFactory"/>
+<fullyQualifiedTypeName name="org.semanticweb.owlapi.reasoner.structural.StructuralReasonerFactory"/>
 </qualifiedTypeNameHistroy>

@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -18,12 +19,14 @@ import org.semanticweb.owlapi.model.OWLAnnotation;
 import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLDataFactory;
+import org.semanticweb.owlapi.model.OWLEquivalentClassesAxiom;
 import org.semanticweb.owlapi.model.OWLIndividualAxiom;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyFormat;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
+import org.semanticweb.owlapi.model.OWLSubClassOfAxiom;
 import org.semanticweb.owlapi.owllink.OWLlinkHTTPXMLReasonerFactory;
 import org.semanticweb.owlapi.reasoner.ConsoleProgressMonitor;
 import org.semanticweb.owlapi.reasoner.InferenceType;
@@ -61,7 +64,7 @@ public class ParenthoodExample_optimized {
 	    OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
 	    File file = new File(args[0]);
 	    OWLOntology ontology = manager.loadOntologyFromOntologyDocument(file);
-	    System.out.println("axioms before reasoner" +ontology.getAxiomCount());
+	    System.out.println("axioms before reasoning" +ontology.getAxiomCount());
 	    Set<OWLClass> classes = ontology.getClassesInSignature();
 	    String filename = FilenameUtils.removeExtension(args[0]);
 
@@ -70,26 +73,29 @@ public class ParenthoodExample_optimized {
 //	    for(OWLClass clas : classes) {
 //        	System.out.println(clas);}
 	    OWLDataFactory df = manager.getOWLDataFactory();
+	    String args1 = args[1];
+	    Reasoner reasoner = Reasoner.valueOf(args1);
+	    System.out.println(RunReasoner(reasoner, df,ontology,manager,filename));
 
 //	    Reasoner hermit = Reasoner.HERMIT;
 //	    System.out.println(RunReasoner(hermit, df,ontology,manager,filename));
-	    
+//	    
 //	    Reasoner Structural = Reasoner.Structural;
 //	    System.out.println(RunReasoner(Structural, df,ontology,manager,filename));
 //	    
 //	    
 //	    Reasoner openllet = Reasoner.PELLET;
 //	    System.out.println(RunReasoner(openllet, df,ontology,manager,filename));
-	    
+//	    
 //	    Reasoner konclude = Reasoner.KONCLUDE;
 //	    System.out.println(RunReasoner(konclude, df,ontology,manager,filename));
 //	    
 //	    Reasoner elk = Reasoner.ELK;
 //	    System.out.println(RunReasoner(elk, df,ontology,manager,filename));
-//	    
-	    Reasoner jfact = Reasoner.JFACT;
-	    System.out.println(RunReasoner(jfact, df,ontology,manager,filename));
 	    
+//	    Reasoner jfact = Reasoner.JFACT;
+//	    System.out.println(RunReasoner(jfact, df,ontology,manager,filename));
+//	    
 	    
 
 	
@@ -168,33 +174,38 @@ public class ParenthoodExample_optimized {
 			    	reasoner_object.flush(); //Flushes any changes stored in the buffer, which causes the reasoner to take into consideration the changes the current root ontology specified by the changes. FROM RONALD's CODE
 			        List<InferredAxiomGenerator<? extends OWLAxiom>> generators = new ArrayList<>();
 			        generators.add(new InferredSubClassAxiomGenerator());
-//			        generators.add(new InferredClassAssertionAxiomGenerator());
-//			        generators.add(new InferredDataPropertyCharacteristicAxiomGenerator());
-//			        generators.add(new InferredEquivalentClassAxiomGenerator());
-//			        generators.add(new InferredEquivalentDataPropertiesAxiomGenerator());
-//			        generators.add(new InferredEquivalentObjectPropertyAxiomGenerator());
-//			        generators.add(new InferredInverseObjectPropertiesAxiomGenerator());
-//			        generators.add(new InferredObjectPropertyCharacteristicAxiomGenerator());
+			        generators.add(new InferredClassAssertionAxiomGenerator());
+			        generators.add(new InferredDataPropertyCharacteristicAxiomGenerator());
+			        generators.add(new InferredEquivalentClassAxiomGenerator());
+			        generators.add(new InferredEquivalentDataPropertiesAxiomGenerator());
+			        generators.add(new InferredEquivalentObjectPropertyAxiomGenerator());
+			        generators.add(new InferredInverseObjectPropertiesAxiomGenerator());
+			        generators.add(new InferredObjectPropertyCharacteristicAxiomGenerator());
 
 			        // NOTE: InferredPropertyAssertionGenerator significantly slows down
 			        // inference computation
-			        generators.add(new org.semanticweb.owlapi.util.InferredPropertyAssertionGenerator());
+			       //generators.add(new org.semanticweb.owlapi.util.InferredPropertyAssertionGenerator());
 
 			        generators.add(new InferredSubClassAxiomGenerator());
 			        generators.add(new InferredSubDataPropertyAxiomGenerator());
 			        generators.add(new InferredSubObjectPropertyAxiomGenerator());
 			        List<InferredIndividualAxiomGenerator<? extends OWLIndividualAxiom>> individualAxioms =
-			            new ArrayList<>();
+			            new ArrayList<>();					
 			        generators.addAll(individualAxioms);
 			        System.out.println("quasi finito");
-			        generators.add(new InferredDisjointClassesAxiomGenerator());
-			        InferredOntologyGenerator iog = new InferredOntologyGenerator(reasoner_object, generators); //Generates an ontology based on inferred axioms which are essentially supplied by a reasoner
+			        //generators.add(new InferredDisjointClassesAxiomGenerator());
+			        //InferredOntologyGenerator iog = new InferredOntologyGenerator(reasoner_object, generators); //Generates an ontology based on inferred axioms which are essentially supplied by a reasoner
 			        OWLOntology inferredAxiomsOntology = manager.createOntology();
-			        iog.fillOntology(df, inferredAxiomsOntology);
-			        System.out.println("quasi finito manca solo il file");
+			        //iog.fillOntology(df, inferredAxiomsOntology);
+			        
+			        for (InferredAxiomGenerator inf : generators ) {
+			        	System.out.println(inf);
+			        	Set<OWLAxiom> ax = inf.createAxioms(df, reasoner_object);
+			        	inferredAxiomsOntology.addAxioms(ax);
+			        }
+			        
+
 			        System.out.println("numero inferred axioms "  + inferredAxiomsOntology.getAxiomCount());
-//			        for(InferredAxiomGenerator<?> i : iog.getAxiomGenerators()) {
-//			        	System.out.println(i);}
 			        File inferredOntologyFile = new File(FilenameUtils.removeExtension(filename)+"inferred"+reasoner.toString()+".owl");
 			        System.out.println(inferredOntologyFile);
 			        // Now we create a stream since the ontology manager can then write to that stream.
