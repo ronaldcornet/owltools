@@ -36,6 +36,7 @@ public class ConnectionFusekiServer {
 	public static void execSelectAndProcess(String serviceURI, String query) {
 		QueryExecution q = QueryExecutionFactory.sparqlService(serviceURI,
 				query);
+		
 		ResultSet results = q.execSelect();
 
 		while (results.hasNext()) {
