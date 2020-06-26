@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.semanticweb.owlapi.util.InferredEntityAxiomGenerator"/>
-<fullyQualifiedTypeName name="org.semanticweb.owlapi.model.OWLEntity"/>
-<fullyQualifiedTypeName name="org.semanticweb.owlapi.util.InferredObjectPropertyAxiomGenerator"/>
-<fullyQualifiedTypeName name="org.semanticweb.owlapi.model.OWLObjectPropertyAxiom"/>
-<fullyQualifiedTypeName name="org.semanticweb.owlapi.util.InferredOntologyGenerator"/>
-<fullyQualifiedTypeName name="java.util.stream.Stream"/>
-<fullyQualifiedTypeName name="org.semanticweb.owlapi.model.OWLOntologyLoaderConfiguration"/>
 <fullyQualifiedTypeName name="org.semanticweb.owlapi.model.OWLAxiom"/>
 <fullyQualifiedTypeName name="org.protege.owl.diff.present.MatchedAxiom"/>
 <fullyQualifiedTypeName name="org.protege.owl.diff.present.EntityBasedDiff.DiffType"/>
@@ -53,11 +46,18 @@
 <fullyQualifiedTypeName name="org.apache.jena.query.ResultSetFormatter"/>
 <fullyQualifiedTypeName name="openllet.jena.PelletReasonerFactory"/>
 <fullyQualifiedTypeName name="openllet.jena.PelletReasoner"/>
-<fullyQualifiedTypeName name="org.apache.jena.rdfconnection.RDFConnectionFactory"/>
-<fullyQualifiedTypeName name="org.apache.jena.rdfconnection.RDFConnection"/>
 <fullyQualifiedTypeName name="org.apache.jena.query.QueryExecution"/>
 <fullyQualifiedTypeName name="com.hp.hpl.jena.vocabulary.ResultSet"/>
 <fullyQualifiedTypeName name="org.apache.jena.query.ResultSet"/>
 <fullyQualifiedTypeName name="org.apache.jena.query.QuerySolution"/>
+<fullyQualifiedTypeName name="org.apache.jena.atlas.web.ContentType"/>
+<fullyQualifiedTypeName name="org.apache.jena.rdfconnection.RDFConnectionRemoteBuilder"/>
+<fullyQualifiedTypeName name="org.apache.jena.rdfconnection.RDFConnectionRemote"/>
+<fullyQualifiedTypeName name="org.apache.jena.rdfconnection.RDFConnectionLocal"/>
+<fullyQualifiedTypeName name="org.apache.jena.rdfconnection.Isolation"/>
+<fullyQualifiedTypeName name="org.apache.jena.rdfconnection.RDFConnectionFuseki"/>
+<fullyQualifiedTypeName name="org.apache.jena.rdfconnection.RDFConnectionFactory"/>
+<fullyQualifiedTypeName name="org.apache.jena.rdfconnection.RDFConnection"/>
+<fullyQualifiedTypeName name="org.apache.jena.query.ReadWrite"/>
 <fullyQualifiedTypeName name="org.apache.jena.rdf.model.Resource"/>
 </qualifiedTypeNameHistroy>
