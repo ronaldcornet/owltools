@@ -24,11 +24,12 @@
 	    <version>1.5.2</version>
 	</dependency> 
 	
-	<dependency>
+<dependency>
 	    <groupId>ignazioFork_OWLlink_for_OWLAPI5</groupId>
 	    <artifactId>ignazioFork_OWLlink_for_OWLAPI5</artifactId>
 	    <version>1.0</version>
-	    <scope>system</scope>
+		<scope>system</scope>
+		<systemPath>${basedir}/ignazioFork_OWLlink_for_OWLAPI5.jar</systemPath>
 	</dependency>
 	
 
