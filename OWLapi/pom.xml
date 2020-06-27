@@ -24,7 +24,14 @@
 	    <version>1.5.2</version>
 	</dependency> 
 	
+	<dependency>
+	    <groupId>ignazioFork_OWLlink_for_OWLAPI5</groupId>
+	    <artifactId>ignazioFork_OWLlink_for_OWLAPI5</artifactId>
+	    <version>1.0</version>
+	    <scope>system</scope>
+	</dependency>
 	
+
 	<dependency>
 	    <groupId>au.csiro</groupId>
 	    <artifactId>snorocket-owlapi</artifactId>
