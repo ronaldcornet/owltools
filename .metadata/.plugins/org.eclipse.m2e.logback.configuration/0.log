@@ -11958,3 +11958,4 @@ org.eclipse.core.runtime.CoreException: Could not read maven project
 	at org.eclipse.m2e.editor.pom.MavenPomEditor$3.run(MavenPomEditor.java:1043) ~[na:na]
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) [org.eclipse.core.jobs_3.10.600.v20191122-2104.jar:na]
 2020-06-27 11:54:47,771 [Worker-27: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: OWLapi:OWLapi:0.0.1-SNAPSHOT @ C:\Users\Rita\git\structura\OWLapi\pom.xml.
+2020-06-27 11:54:49,426 [Worker-27: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for ignazioFork_OWLlink_for_OWLAPI5:ignazioFork_OWLlink_for_OWLAPI5:jar:1.0 is missing, no dependency information available
