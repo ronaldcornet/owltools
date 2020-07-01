@@ -59,7 +59,7 @@ import org.semanticweb.owlapi.util.InferredOntologyGenerator;
 import org.semanticweb.owlapi.util.InferredSubClassAxiomGenerator;
 import org.semanticweb.owlapi.util.InferredSubDataPropertyAxiomGenerator;
 import org.semanticweb.owlapi.util.InferredSubObjectPropertyAxiomGenerator;
-
+import org.semanticweb.owlapi.owllink.OWLlinkHTTPXMLReasonerFactory;
 import au.csiro.snorocket.owlapi.SnorocketReasonerFactory;
 import openllet.owlapi.OpenlletReasonerFactory;
 import uk.ac.manchester.cs.factplusplus.owlapiv3.FaCTPlusPlusReasoner;
