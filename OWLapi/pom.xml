@@ -16,6 +16,11 @@
 	    <artifactId>owl-diff</artifactId>
 	    <version>6.0.2</version>
 	</dependency>
+	<dependency>
+	  <groupId>net.sourceforge.owlapi</groupId>
+	  <artifactId>owllinkapi</artifactId>
+	  <version>2.0.0</version>
+	</dependency>
 		
 	<!-- https://mvnrepository.com/artifact/uk.ac.manchester.cs/factplusplus -->
 	<dependency>
@@ -23,14 +28,27 @@
 	    <artifactId>factplusplus</artifactId>
 	    <version>1.5.2</version>
 	</dependency> 
+	<!--  JENA STUFF -->
+	<dependency>
+	    <groupId>org.apache.jena</groupId>
+	    <artifactId>apache-jena-libs</artifactId>
+	    <version>3.15.0</version>
+	    <type>pom</type>
+	    </dependency>
+		<dependency>
+		    <groupId>org.apache.jena</groupId>
+		    <artifactId>jena-core</artifactId>
+		    <version>3.15.0</version>
+		</dependency>
+		
 	
-<dependency>
+<!-- <dependency>
 	    <groupId>ignazioFork_OWLlink_for_OWLAPI5</groupId>
 	    <artifactId>ignazioFork_OWLlink_for_OWLAPI5</artifactId>
 	    <version>1.0</version>
 		<scope>system</scope>
 		<systemPath>${basedir}/ignazioFork_OWLlink_for_OWLAPI5.jar</systemPath>
-	</dependency>
+	</dependency> -->
 	
 
 	<dependency>

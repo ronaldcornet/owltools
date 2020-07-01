@@ -223,7 +223,7 @@ public class ParenthoodExample_optimized {
 			        
 			        // NOTE: InferredPropertyAssertionGenerator significantly slows down
 			        // inference computation
-			        generators.add(new org.semanticweb.owlapi.util.InferredPropertyAssertionGenerator());
+			        //generators.add(new org.semanticweb.owlapi.util.InferredPropertyAssertionGenerator());
 			        generators.add(new InferredSubDataPropertyAxiomGenerator());
 			        generators.add(new InferredSubObjectPropertyAxiomGenerator());
 			        
@@ -247,7 +247,7 @@ public class ParenthoodExample_optimized {
 				            new ArrayList<>();					
 				        generators.addAll(classAxioms);
 				        
-			        generators.add(new InferredDisjointClassesAxiomGenerator());
+			        //generators.add(new InferredDisjointClassesAxiomGenerator());
 			        //InferredOntologyGenerator iog = new InferredOntologyGenerator(reasoner_object, generators); //Generates an ontology based on inferred axioms which are essentially supplied by a reasoner
 			        OWLOntology inferredAxiomsOntology = manager.createOntology();
 			        //iog.fillOntology(df, inferredAxiomsOntology);
