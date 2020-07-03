@@ -22,7 +22,7 @@ public class DataLoaderOWLapi {
 
 	public static void main(String[] args) throws OWLOntologyCreationException {
 		OWLOntologyManager man = OWLManager.createOWLOntologyManager();
-		IRI iri = IRI.create("C:\\Users\\Rita\\Desktop\\dementia-empty.owl");
+		IRI iri = IRI.create(args[0]);
 		
 		//Create new ontology
 		OWLOntology onto = man.createOntology(iri);

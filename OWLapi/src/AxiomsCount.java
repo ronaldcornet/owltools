@@ -10,10 +10,9 @@ import org.semanticweb.owlapi.model.OWLOntologyManager;
 public class AxiomsCount {
 	public static void main(String[] args) throws Exception {
 	    OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
-	    File file = new File("C:\\Users\\Rita\\Desktop\\parenthood_jena\\parenthood_inferreBy_PELLET_from_JENA.txt");
+	    File file = new File(args[0]);
 	    OWLOntology ontology = manager.loadOntologyFromOntologyDocument(file);
 	    System.out.println("axioms " +ontology.getAxiomCount());
-	    Set<OWLClass> classes = ontology.getClassesInSignature();
 	   
 	}
 }

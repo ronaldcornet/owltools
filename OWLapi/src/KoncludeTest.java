@@ -18,7 +18,7 @@ public class KoncludeTest {
 		try {
 			// create a test ontology
 			OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
-			String path = "C:\\Users\\Rita\\Desktop\\dementia.rdf";
+			String path = args[0];
 			OWLOntology ontology =logicalAxiomsOnly(path, manager); 
 			OWLDataFactory dfactory = manager.getOWLDataFactory();
 			OWLClass dementia = dfactory.getOWLClass(IRI.create("http://www.semanticweb.org/rita/ontologies/2020/1/untitled-ontology-2#Dementia"));
@@ -27,7 +27,7 @@ public class KoncludeTest {
 			manager.addAxiom(ontology, a);*/
 			
 			// configure the server end-point
-			URL url = new URL("http://localhost:8080");
+			URL url = new URL(args[1]);  //"http://localhost:8080"
 			//OWLlinkReasonerConfiguration reasonerConfiguration = new OWLlinkReasonerConfiguration(url);
 			OWLlinkHTTPXMLReasonerFactory factory = new OWLlinkHTTPXMLReasonerFactory();
 			 	OWLReasoner reasoner = factory.createNonBufferingReasoner(ontology);

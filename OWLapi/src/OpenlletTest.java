@@ -16,7 +16,7 @@ public class OpenlletTest {
 		OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
 		OWLDataFactory df = manager.getOWLDataFactory();
 		// Ontology file
-		File file = new File("C:\\Users\\Rita\\Desktop\\dementia.rdf");
+		File file = new File(args[0]);
 		
 		// Load the local copy
 		OWLOntology localOnt = manager.loadOntologyFromOntologyDocument(file);

@@ -24,7 +24,7 @@ public class HermitTest {
 		OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
 		OWLDataFactory df = manager.getOWLDataFactory();
 		// Ontology file
-		File file = new File("C:\\Users\\Rita\\Desktop\\dementia.rdf");
+		File file = new File(args[0]);
 		
 		// Load the local copy
 		OWLOntology localOnt = manager.loadOntologyFromOntologyDocument(file);
@@ -33,9 +33,6 @@ public class HermitTest {
 		
 		/************REASONERS TEST**************************************************/
 		/************HERMIT**********************************************************/
-//		OWLReasonerFactory rf = new ReasonerFactory();
-//		OWLReasoner r = rf.createReasoner(localOnt);
-//		r.precomputeInferences(InferenceType.CLASS_HIERARCHY);
 		
 		// get and configure a reasoner (HermiT)
 		ReasonerFactory rf = new ReasonerFactory();

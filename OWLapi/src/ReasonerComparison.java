@@ -59,7 +59,6 @@ import org.semanticweb.owlapi.util.InferredOntologyGenerator;
 import org.semanticweb.owlapi.util.InferredSubClassAxiomGenerator;
 import org.semanticweb.owlapi.util.InferredSubDataPropertyAxiomGenerator;
 import org.semanticweb.owlapi.util.InferredSubObjectPropertyAxiomGenerator;
-import org.semanticweb.owlapi.owllink.OWLlinkHTTPXMLReasonerFactory;
 import au.csiro.snorocket.owlapi.SnorocketReasonerFactory;
 import openllet.owlapi.OpenlletReasonerFactory;
 import uk.ac.manchester.cs.factplusplus.owlapiv3.FaCTPlusPlusReasoner;
@@ -68,7 +67,7 @@ import uk.ac.manchester.cs.jfact.JFactFactory;
 import org.semanticweb.elk.owlapi.ElkReasonerFactory;
 //import org.semanticweb.reasonerfactory.factpp.FaCTPlusPlusReasonerFactory;
  
-public class ParenthoodExample_optimized {
+public class ReasonerComparison {
 	public static void main(String[] args) throws Exception {
 	    OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
 	    File file = new File(args[0]);
@@ -87,29 +86,7 @@ public class ParenthoodExample_optimized {
 		}
 	    catch (final OWLlinkErrorResponseException e) {
 	    	System.out.println(e.getMessage());
-		}
-//	    Reasoner hermit = Reasoner.HERMIT;
-//	    System.out.println(RunReasoner(hermit, df,ontology,manager,filename));
-//	    
-//	    Reasoner Structural = Reasoner.Structural;
-//	    System.out.println(RunReasoner(Structural, df,ontology,manager,filename));
-//	    
-//	    
-//	    Reasoner openllet = Reasoner.PELLET;
-//	    System.out.println(RunReasoner(openllet, df,ontology,manager,filename));
-//	    
-//	    Reasoner konclude = Reasoner.KONCLUDE;
-//	    System.out.println(RunReasoner(konclude, df,ontology,manager,filename));
-//	    
-//	    Reasoner elk = Reasoner.ELK;
-//	    System.out.println(RunReasoner(elk, df,ontology,manager,filename));
-	    
-//	    Reasoner jfact = Reasoner.JFACT;
-//	    System.out.println(RunReasoner(jfact, df,ontology,manager,filename));
-//	    
-	    
-
-	
+		}	
 	}
 	
 	//CREATE AN ENUM REASONER

@@ -24,7 +24,7 @@ import openllet.jena.PelletReasoner;
 import openllet.jena.PelletReasonerFactory;
 import openllet.query.sparqldl.jena.SparqlDLExecutionFactory;
 
-public class Parenthoodexample_newcode_jena {
+public class PelletTest {
 	public static void main(String[] args) throws Exception {
 		
 		
