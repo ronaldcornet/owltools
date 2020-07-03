@@ -12,8 +12,8 @@ ELK
 KONCLUDE
 
 Command-line options:
-mvn exec:java -Dexec.mainClass=ParenthoodExample_optimized -Dexec.args="ontologyPath reasoner"
+mvn exec:java -Dexec.mainClass=ReasonerComparison -Dexec.args="ontologyPath reasoner"
 
-mvn exec:java -Dexec.mainClass=OWLJenaAPI -Dexec.args="ontologyPath reasoner connectionString"
+mvn exec:java -Dexec.mainClass=ReasonerComparison_with_SPARQLconnection -Dexec.args="ontologyPath reasoner connectionString"
 
 
