@@ -79,13 +79,19 @@ public class ReasonerComparison_with_SPARQLconnection {
 		    //File filename = FilenameUtils.removeExtension(args[0]);
 
 		    //String for connection
-		    String connectionString  = args[2];
+		    String connectionString  = args[2];         
+			String queryString =  connectionString+"/query?force=true";
+			String updateString = connectionString+"/update";
+			String graphStoreProtocolString = connectionString+"/data";
+			//RDFConnection Interface for SPARQL operations on a datasets, whether local or remote.
+			//RDFConnectionFactory.connect --> Create a connection specifying the URLs of the service.
+			RDFConnection conn = RDFConnectionFactory.connect(queryString,updateString,graphStoreProtocolString);
 		    
 		    OWLDataFactory df = manager.getOWLDataFactory();
 		    String args1 = args[1];
 		    Reasoner reasoner = Reasoner.valueOf(args1);
 		    try {
-		    System.out.println(RunReasoner(reasoner, df,ontology,manager,file,connectionString));
+		    System.out.println(RunReasoner(reasoner, df,ontology,manager,file,conn));
 		    }catch (final UnsupportedEntailmentTypeException e) {
 		    	System.out.println(e.getMessage());
 			}
@@ -109,7 +115,7 @@ public class ReasonerComparison_with_SPARQLconnection {
 			SNOROCKET
 			
 		}
-		public static String RunReasoner(Reasoner reasoner, OWLDataFactory df, OWLOntology ontology, OWLOntologyManager manager, File filename, String connectionString) throws OWLOntologyCreationException, FileNotFoundException, IOException, OWLOntologyStorageException {
+		public static String RunReasoner(Reasoner reasoner, OWLDataFactory df, OWLOntology ontology, OWLOntologyManager manager, File filename, RDFConnection conn) throws OWLOntologyCreationException, FileNotFoundException, IOException, OWLOntologyStorageException {
 			String esito = "";
 			OWLReasoner reasoner_object = null;
 			
@@ -295,14 +301,6 @@ public class ReasonerComparison_with_SPARQLconnection {
 				        System.out.println("numero inferred axioms "  + inferredAxiomsOntology.getAxiomCount());
 				        File inferredOntologyFile = new File(mainDir,namefile+"_inferredBy_"+reasoner.toString()+".owl");
 				        
-				         
-						String queryString =  connectionString+"/query?force=true";
-						String updateString = connectionString+"/update";
-						String graphStoreProtocolString = connectionString+"/data";
-						
-						//RDFConnection Interface for SPARQL operations on a datasets, whether local or remote.
-						//RDFConnectionFactory.connect --> Create a connection specifying the URLs of the service.
-						RDFConnection conn = RDFConnectionFactory.connect(queryString,updateString,graphStoreProtocolString);
 						
 						//load method = Load RDF into the default graph of a dataset. This is SPARQL Graph Store Protocol HTTP POST or equivalent.
 								conn.load(inferredOntologyFile.getPath()) ;      //"C:\\Users\\Rita\\Desktop\\parenthood.owl"    
