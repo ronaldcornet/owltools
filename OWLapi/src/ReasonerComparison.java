@@ -30,7 +30,7 @@ import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
-import org.semanticweb.owlapi.owllink.OWLlinkHTTPXMLReasonerFactory;
+import org.semanticweb.owlapi.owllink.*;
 import org.semanticweb.owlapi.owllink.builtin.response.OWLlinkErrorResponseException;
 import org.semanticweb.owlapi.reasoner.BufferingMode;
 import org.semanticweb.owlapi.reasoner.InferenceType;
@@ -59,7 +59,6 @@ import org.semanticweb.owlapi.util.InferredOntologyGenerator;
 import org.semanticweb.owlapi.util.InferredSubClassAxiomGenerator;
 import org.semanticweb.owlapi.util.InferredSubDataPropertyAxiomGenerator;
 import org.semanticweb.owlapi.util.InferredSubObjectPropertyAxiomGenerator;
-import au.csiro.snorocket.owlapi.SnorocketReasonerFactory;
 import openllet.owlapi.OpenlletReasonerFactory;
 import uk.ac.manchester.cs.factplusplus.owlapiv3.FaCTPlusPlusReasoner;
 import uk.ac.manchester.cs.jfact.JFactFactory;
@@ -155,7 +154,7 @@ public class ReasonerComparison {
 			URL url = new URL("http://localhost:8080");
 			OWLlinkHTTPXMLReasonerFactory factory = new OWLlinkHTTPXMLReasonerFactory();
 			TimedConsoleProgressMonitor progressMonitor = new TimedConsoleProgressMonitor();
-			//OWLlinkReasonerConfiguration conf = (OWLlinkReasonerConfiguration) new SimpleConfiguration(progressMonitor);
+			//OWLReasonerConfiguration conf = new SimpleConfiguration(progressMonitor);
 			reasoner_object = factory.createNonBufferingReasoner(ontology);
 					
 		}
