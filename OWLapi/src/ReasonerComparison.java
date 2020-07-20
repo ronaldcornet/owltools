@@ -13,11 +13,13 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import java.nio.file.Files;
 
+import org.apache.commons.compress.utils.FileNameUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.joda.time.DateTime;
 import org.semanticweb.HermiT.Configuration;
 import org.semanticweb.HermiT.ReasonerFactory;
 import org.semanticweb.owlapi.apibinding.OWLManager;
+import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLClassAxiom;
@@ -68,18 +70,10 @@ import org.semanticweb.elk.owlapi.ElkReasonerFactory;
  
 public class ReasonerComparison {
 	public static void main(String[] args) throws Exception {
-	    OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
-	    File file = new File(args[0]);
-	    OWLOntology ontology = manager.loadOntologyFromOntologyDocument(file);
-	    System.out.println("axioms before reasoning" +ontology.getAxiomCount());
-	    Set<OWLClass> classes = ontology.getClassesInSignature();
-	    //File filename = FilenameUtils.removeExtension(args[0]);
-
-	    OWLDataFactory df = manager.getOWLDataFactory();
-	    String args1 = args[1];
-	    Reasoner reasoner = Reasoner.valueOf(args1);
+	    String file = args[0];
+	    Reasoner reasoner = Reasoner.valueOf(args[1]);
 	    try {
-	    System.out.println(RunReasoner(reasoner, df,ontology,manager,file));
+	    System.out.println(RunReasoner(reasoner,file));
 	    }catch (final UnsupportedEntailmentTypeException e) {
 	    	System.out.println(e.getMessage());
 		}
@@ -100,10 +94,28 @@ public class ReasonerComparison {
 		SNOROCKET
 		
 	}
-	public static String RunReasoner(Reasoner reasoner, OWLDataFactory df, OWLOntology ontology, OWLOntologyManager manager, File filename) throws OWLOntologyCreationException, FileNotFoundException, IOException, OWLOntologyStorageException {
+	public static String RunReasoner(Reasoner reasoner, String file) throws OWLOntologyCreationException, FileNotFoundException, IOException, OWLOntologyStorageException {
 		String esito = "";
 		OWLReasoner reasoner_object = null;
-		
+		OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
+		OWLOntology ontology = null;
+		try {
+			 IRI filename = IRI.create(file);
+			 ontology = manager.loadOntology(filename);
+		}catch(Exception e ) {
+			File filename = new File(file);
+			ontology = manager.loadOntologyFromOntologyDocument(filename);
+		}
+	
+		/*}else {
+			// filename = new File(file);
+			// ontology = manager.loadOntologyFromOntologyDocument(filename);
+		}*/
+	    
+	    System.out.println("axioms before reasoning" +ontology.getAxiomCount());
+	    Set<OWLClass> classes = ontology.getClassesInSignature();
+	    OWLDataFactory df = manager.getOWLDataFactory();
+
 		//to measure execution time
 		long startTime = System.nanoTime();
 		if(reasoner == Reasoner.HERMIT) {
@@ -144,9 +156,7 @@ public class ReasonerComparison {
 		    configuration.reasonerProgressMonitor = progressMonitor;
 		    configuration.ignoreUnsupportedDatatypes = true;
 			reasoner_object = new FaCTPlusPlusReasoner(ontology,configuration,BufferingMode.BUFFERING);
-		  //  reasoner_object = rf.
-		    		
-		    		//.createReasoner(ontology, configuration);
+		  //reasoner_object = rf..createReasoner(ontology, configuration);
 		}
 		else if(reasoner == Reasoner.KONCLUDE) {
 			
@@ -228,8 +238,10 @@ public class ReasonerComparison {
 			        OWLOntology inferredAxiomsOntology = manager.createOntology();
 			        //iog.fillOntology(df, inferredAxiomsOntology);
 			        
-		        	String path = filename.getParent();
-		        	String namefile = FilenameUtils.removeExtension(filename.getName());
+		        	String path = "C:/";//filename.getParent();
+		        	String namefile = FilenameUtils.getName(file);
+		        			
+		        			//FilenameUtils.removeExtension(filename.getName());
 		        	//create main directory
 		        	File mainDir = new File(path+"/"+namefile);
 		        	if (!mainDir.exists()) mainDir.mkdirs();	

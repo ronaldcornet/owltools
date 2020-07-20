@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="org.protege.owl.diff.present.Changes"/>
 <fullyQualifiedTypeName name="org.protege.owl.diff.present.algorithms.IdentifyRenameOperation"/>
 <fullyQualifiedTypeName name="org.protege.owl.diff.present.algorithms.IdentifyMergedConcepts"/>
@@ -60,4 +59,5 @@
 <fullyQualifiedTypeName name="org.apache.jena.system.Txn"/>
 <fullyQualifiedTypeName name="org.semanticweb.owlapi.owllink.OWLlinkHTTPXMLReasonerFactory"/>
 <fullyQualifiedTypeName name="org.semanticweb.owlapi.owllink.builtin.response.OWLlinkErrorResponseException"/>
+<fullyQualifiedTypeName name="org.semanticweb.owlapi.model.IRI"/>
 </qualifiedTypeNameHistroy>

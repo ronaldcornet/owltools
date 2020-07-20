@@ -22,6 +22,7 @@ import org.semanticweb.HermiT.Configuration;
 import org.semanticweb.HermiT.ReasonerFactory;
 import org.semanticweb.elk.owlapi.ElkReasonerFactory;
 import org.semanticweb.owlapi.apibinding.OWLManager;
+import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLClassAxiom;
@@ -69,12 +70,8 @@ import uk.ac.manchester.cs.jfact.JFactFactory;
 
 public class ReasonerComparison_with_remoteSPARQLconnection {
 	public static void main(String[] args) throws OWLOntologyCreationException, OWLException, Exception {
-	    OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
-	    File file = new File(args[0]);
-	    OWLOntology ontology = manager.loadOntologyFromOntologyDocument(file);
-	    System.out.println("axioms before reasoning" +ontology.getAxiomCount());
-	    Set<OWLClass> classes = ontology.getClassesInSignature();
-	    //File filename = FilenameUtils.removeExtension(args[0]);
+
+	    String file =args[0];
 
 	    //String for connection
 	    String connectionString  = args[2];
@@ -83,7 +80,6 @@ public class ReasonerComparison_with_remoteSPARQLconnection {
 	    //Password
 	    String password  = args[4];
 	    
-	    OWLDataFactory df = manager.getOWLDataFactory();
 	    String args1 = args[1];
 	    Reasoner reasoner = Reasoner.valueOf(args1);
 	    
@@ -92,7 +88,7 @@ public class ReasonerComparison_with_remoteSPARQLconnection {
 		RDFConnection conn = RDFConnectionFactory.connectPW(connectionString, user, password);
 		
 	    try {
-	    System.out.println(RunReasoner(reasoner, df,ontology,manager,file,conn));
+	    System.out.println(RunReasoner(reasoner,file,conn));
 	    }catch (final UnsupportedEntailmentTypeException e) {
 	    	System.out.println(e.getMessage());
 		}
@@ -116,10 +112,22 @@ public class ReasonerComparison_with_remoteSPARQLconnection {
 		SNOROCKET
 		
 	}
-	public static String RunReasoner(Reasoner reasoner, OWLDataFactory df, OWLOntology ontology, OWLOntologyManager manager, File filename, RDFConnection conn) throws OWLOntologyCreationException, FileNotFoundException, IOException, OWLOntologyStorageException {
+	public static String RunReasoner(Reasoner reasoner, String file, RDFConnection conn) throws OWLOntologyCreationException, FileNotFoundException, IOException, OWLOntologyStorageException {
 		String esito = "";
 		OWLReasoner reasoner_object = null;
-		
+	    OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
+
+	    OWLOntology ontology = null;
+	    try {
+			 IRI filename = IRI.create(file);
+			 ontology = manager.loadOntology(filename);
+		}catch(Exception e ) {
+			File filename = new File(file);
+			ontology = manager.loadOntologyFromOntologyDocument(filename);
+		}
+	
+	    OWLDataFactory df = manager.getOWLDataFactory();
+	    System.out.println("axioms before reasoning" +ontology.getAxiomCount());
 		//to measure execution time
 		long startTime = System.nanoTime();
 		if(reasoner == Reasoner.HERMIT) {
@@ -244,8 +252,8 @@ public class ReasonerComparison_with_remoteSPARQLconnection {
 			        OWLOntology inferredAxiomsOntology = manager.createOntology();
 			        //iog.fillOntology(df, inferredAxiomsOntology);
 			        
-		        	String path = filename.getParent();
-		        	String namefile = FilenameUtils.removeExtension(filename.getName());
+		        	String path = "C:/";//filename.getParent();
+		        	String namefile = FilenameUtils.getName(file);
 		        	//create main directory
 		        	File mainDir = new File(path+"/"+namefile);
 		        	if (!mainDir.exists()) mainDir.mkdirs();	
