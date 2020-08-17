@@ -238,7 +238,7 @@ public class ReasonerComparison {
 			        OWLOntology inferredAxiomsOntology = manager.createOntology();
 			        //iog.fillOntology(df, inferredAxiomsOntology);
 			        
-		        	String path = "C:/";//filename.getParent();
+		        	String path = System.getProperty("user.home");    //"C:/";//filename.getParent();		        	
 		        	String namefile = FilenameUtils.getName(file);
 		        			
 		        			//FilenameUtils.removeExtension(filename.getName());

@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.protege.owl.diff.present.Changes"/>
-<fullyQualifiedTypeName name="org.protege.owl.diff.present.algorithms.IdentifyRenameOperation"/>
-<fullyQualifiedTypeName name="org.protege.owl.diff.present.algorithms.IdentifyMergedConcepts"/>
 <fullyQualifiedTypeName name="org.protege.owl.diff.present.algorithms.IdentifyRetiredConcepts"/>
 <fullyQualifiedTypeName name="org.protege.owl.diff.present.EntityBasedDiff"/>
 <fullyQualifiedTypeName name="java.util.Collection"/>
@@ -60,4 +57,7 @@
 <fullyQualifiedTypeName name="org.semanticweb.owlapi.owllink.OWLlinkHTTPXMLReasonerFactory"/>
 <fullyQualifiedTypeName name="org.semanticweb.owlapi.owllink.builtin.response.OWLlinkErrorResponseException"/>
 <fullyQualifiedTypeName name="org.semanticweb.owlapi.model.IRI"/>
+<fullyQualifiedTypeName name="org.semanticweb.owlapi.atomicdecomposition.ModuleMethod"/>
+<fullyQualifiedTypeName name="java.net.URI"/>
+<fullyQualifiedTypeName name="org.apache.commons.compress.utils.FileNameUtils"/>
 </qualifiedTypeNameHistroy>

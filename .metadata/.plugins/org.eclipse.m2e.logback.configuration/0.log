@@ -13834,3 +13834,43 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact uk.ac.manches
 2020-07-20 16:23:06,373 [Worker-139: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2020-07-20 16:23:06,375 [Worker-139: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\Desktop\test8\structura\OWLapi\src\main\resources
 2020-07-20 16:23:06,376 [Worker-139: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-20 16:23:06,376 [Worker-139: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\Desktop\test8\structura\OWLapi\src\test\resources
+2020-07-21 09:06:06,490 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-07-21 12:45:00,638 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-07-21 12:50:16,463 [Worker-23: Launching ReasonerComparison] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.mortbay.jetty:org.mortbay.jetty:jar:5.1.11 is missing, no dependency information available
+2020-07-21 12:50:16,467 [Worker-23: Launching ReasonerComparison] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.mortbay.jetty:org.mortbay.jmx:jar:5.1.11 is missing, no dependency information available
+2020-07-21 12:50:16,471 [Worker-23: Launching ReasonerComparison] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.mortbay.jetty:javax.servlet:jar:5.1.11 is missing, no dependency information available
+2020-07-21 12:50:17,997 [Worker-23: Launching ReasonerComparison] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-21 12:50:17,998 [Worker-23: Launching ReasonerComparison] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\Desktop\test8\structura\OWLapi\src\main\resources
+2020-07-21 12:50:18,000 [Worker-23: Launching ReasonerComparison] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-21 12:50:18,002 [Worker-23: Launching ReasonerComparison] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\Desktop\test8\structura\OWLapi\src\test\resources
+2020-07-21 12:50:18,611 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-21 12:50:18,612 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\Desktop\test8\structura\JENAapi\src\main\resources
+2020-07-21 12:50:18,614 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-21 12:50:18,615 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\Desktop\test8\structura\JENAapi\src\test\resources
+2020-07-21 12:51:01,614 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-21 12:51:01,615 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\Desktop\test8\structura\OWLapi\src\main\resources
+2020-07-21 12:51:01,618 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-21 12:51:01,619 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\Desktop\test8\structura\OWLapi\src\test\resources
+2020-07-21 12:51:23,286 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-21 12:51:23,287 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\Desktop\test8\structura\OWLapi\src\main\resources
+2020-07-21 12:51:23,289 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-21 12:51:23,290 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\Desktop\test8\structura\OWLapi\src\test\resources
+2020-07-21 12:52:04,896 [Worker-24: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-21 12:52:04,897 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\Desktop\test8\structura\OWLapi\src\main\resources
+2020-07-21 12:52:04,898 [Worker-24: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-21 12:52:04,899 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\Desktop\test8\structura\OWLapi\src\test\resources
+2020-07-21 13:13:22,566 [Worker-29: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-21 13:13:22,569 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\Desktop\test8\structura\OWLapi\src\main\resources
+2020-07-21 13:13:22,570 [Worker-29: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-21 13:13:22,572 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\Desktop\test8\structura\OWLapi\src\test\resources
+2020-07-21 13:14:02,542 [Worker-30: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-21 13:14:02,545 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\Desktop\test8\structura\OWLapi\src\main\resources
+2020-07-21 13:14:02,547 [Worker-30: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-21 13:14:02,549 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\Desktop\test8\structura\OWLapi\src\test\resources
+2020-07-21 13:16:03,287 [Worker-32: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-21 13:16:03,289 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\Desktop\test8\structura\OWLapi\src\main\resources
+2020-07-21 13:16:03,293 [Worker-32: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-07-21 13:16:03,295 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Rita\Desktop\test8\structura\OWLapi\src\test\resources
+2020-08-09 11:16:05,958 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-08-16 12:36:11,775 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
