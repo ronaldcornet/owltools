@@ -1,5 +1,6 @@
 # OwlTools
 
+## Install and run
 In JenaAPI run: mvn install
 
 In OWLAPI run: mvn install 
@@ -14,6 +15,8 @@ JFACT
 ELK
 KONCLUDE
 
+
+## Older notes:
 Command-line options:
 mvn exec:java -Dexec.mainClass=ReasonerComparison -Dexec.args="ontologyPath reasoner"
 
