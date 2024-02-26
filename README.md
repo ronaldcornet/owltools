@@ -1,8 +1,10 @@
-# structura
+# OwlTools
 
 In JenaAPI run: mvn install
 
 In OWLAPI run: mvn install
+Or easier: mvn clean assembly:assembly -DdescriptorId=jar-with-dependencies
+Then run: java -Xmx4G -cp target/OWLapi-0.0.1-SNAPSHOT-jar-with-dependencies.jar ReasonerComparison <ontology file or URL> <reasoner>
 
 Reasoner Options:
 HERMIT
@@ -17,5 +19,4 @@ mvn exec:java -Dexec.mainClass=ReasonerComparison -Dexec.args="ontologyPath reas
 mvn exec:java -Dexec.mainClass=ReasonerComparison_with_SPARQLconnection -Dexec.args="ontologyPath reasoner connectionString"
 
 mvn exec:java -Dexec.mainClass=ReasonerComparison_with_remoteSPARQLconnection -Dexec.args="ontologyPath reasoner connectionString username password"
-
 
