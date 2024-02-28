@@ -15,6 +15,8 @@ JFACT
 ELK
 KONCLUDE
 
+## Alternatives
+You might also consider [https://robot.obolibrary.org/reason](Robot Reasoning in python).
 
 ## Older notes:
 Command-line options:
