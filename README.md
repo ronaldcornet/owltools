@@ -16,7 +16,7 @@ ELK
 KONCLUDE
 
 ## Alternatives
-You might also consider [https://robot.obolibrary.org/reason](Robot Reasoning in python).
+You might also consider [Robot Reasoning in python](https://robot.obolibrary.org/reason).
 
 ## Older notes:
 Command-line options:
