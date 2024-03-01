@@ -8,10 +8,12 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import java.nio.file.Files;
+import java.text.SimpleDateFormat;
 
 import org.apache.commons.compress.utils.FileNameUtils;
 import org.apache.commons.io.FilenameUtils;
@@ -19,6 +21,7 @@ import org.joda.time.DateTime;
 import org.semanticweb.HermiT.Configuration;
 import org.semanticweb.HermiT.ReasonerFactory;
 import org.semanticweb.owlapi.apibinding.OWLManager;
+import org.semanticweb.owlapi.formats.TurtleDocumentFormat;
 import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLClass;
@@ -64,6 +67,7 @@ import org.semanticweb.owlapi.util.InferredSubObjectPropertyAxiomGenerator;
 import openllet.owlapi.OpenlletReasonerFactory;
 import uk.ac.manchester.cs.factplusplus.owlapiv3.FaCTPlusPlusReasoner;
 import uk.ac.manchester.cs.jfact.JFactFactory;
+import au.csiro.snorocket.owlapi.SnorocketReasonerFactory;
 
 import org.semanticweb.elk.owlapi.ElkReasonerFactory;
 //import org.semanticweb.reasonerfactory.factpp.FaCTPlusPlusReasonerFactory;
@@ -72,14 +76,16 @@ public class ReasonerComparison {
 	public static void main(String[] args) throws Exception {
 	    String file = args[0];
 	    Reasoner reasoner = Reasoner.valueOf(args[1]);
+	    System.out.println("RunReasoner " + reasoner + " on " + file);
 	    try {
-	    System.out.println(RunReasoner(reasoner,file));
-	    }catch (final UnsupportedEntailmentTypeException e) {
+	        System.out.println(RunReasoner(reasoner,file));
+	    } catch (final UnsupportedEntailmentTypeException e) {
 	    	System.out.println(e.getMessage());
-		}
-	    catch (final OWLlinkErrorResponseException e) {
+	    } catch (final OWLlinkErrorResponseException e) {
 	    	System.out.println(e.getMessage());
-		}	
+	    } catch (final Exception e) {
+	    	System.out.println(e.getMessage());
+	    }	
 	}
 	
 	//CREATE AN ENUM REASONER
@@ -100,11 +106,22 @@ public class ReasonerComparison {
 		OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
 		OWLOntology ontology = null;
 		try {
+	    		 System.out.println("Reading file as IRI: '" + file + "'");
 			 IRI filename = IRI.create(file);
 			 ontology = manager.loadOntology(filename);
+	    		 System.out.println("IRI read");
 		}catch(Exception e ) {
-			File filename = new File(file);
-			ontology = manager.loadOntologyFromOntologyDocument(filename);
+	    		System.out.println("IRI read failed: " + e);
+			try {
+	    		  System.out.println("Reading file as file: '" + file + "'");
+			  File filename = new File(file);
+	    		  System.out.println("Made file handle: " + filename);
+			  ontology = manager.loadOntologyFromOntologyDocument(filename);
+	    		  System.out.println("File read");
+			} catch(Exception e2 ) {
+	    		  System.out.println("File read failed: " + e2);
+			  System.exit(-1);
+			}
 		}
 	
 		/*}else {
@@ -112,7 +129,18 @@ public class ReasonerComparison {
 			// ontology = manager.loadOntologyFromOntologyDocument(filename);
 		}*/
 	    
-	    System.out.println("axioms before reasoning" +ontology.getAxiomCount());
+	    File inputOntologyFile = new File(".","input.ttl");
+	    /*
+	    System.out.println("Saving as ttl to: " + inputOntologyFile);
+	    // Now we create a stream since the ontology manager can then write to that stream.
+	    try (OutputStream outputStream = new FileOutputStream(inputOntologyFile)) {
+	            // We use the same format as for the input ontology.
+	            manager.saveOntology(ontology, new TurtleDocumentFormat(), outputStream );
+	    }
+	    System.out.println("Saved as ttl");
+	    */
+
+	    System.out.println("axioms before reasoning: " +ontology.getAxiomCount());
 	    Set<OWLClass> classes = ontology.getClassesInSignature();
 	    OWLDataFactory df = manager.getOWLDataFactory();
 
@@ -140,15 +168,14 @@ public class ReasonerComparison {
 		    reasoner_object = rf.createReasoner(ontology, configuration);
 		}
 //		//new entry
-//		else if(reasoner == Reasoner.SNOROCKET) {
-//			
-//			SnorocketReasonerFactory rf = new SnorocketReasonerFactory();
-//		    TimedConsoleProgressMonitor progressMonitor = new TimedConsoleProgressMonitor();
-//		    Configuration configuration = new Configuration();
-//		    configuration.reasonerProgressMonitor = progressMonitor;
-//		    configuration.ignoreUnsupportedDatatypes = true;
-//		    reasoner_object = rf.createReasoner(ontology, configuration);
-//		}
+		else if(reasoner == Reasoner.SNOROCKET) {
+			
+		    SnorocketReasonerFactory rf = new SnorocketReasonerFactory();
+		    TimedConsoleProgressMonitor progressMonitor = new TimedConsoleProgressMonitor();
+		    // OWLReasonerConfiguration configuration = new SimpleConfiguration();
+		    OWLReasonerConfiguration configuration = new Configuration();
+		    reasoner_object = rf.createReasoner(ontology, configuration);
+		}
 		//new entry
 		else if(reasoner == Reasoner.FACT) {
 			TimedConsoleProgressMonitor progressMonitor = new TimedConsoleProgressMonitor();
@@ -190,7 +217,7 @@ public class ReasonerComparison {
 		}
 		System.out.println("UnsatisfiableClasses "+reasoner_object.getUnsatisfiableClasses().getSize());
 		System.out.println("TopClassNode "+reasoner_object.topClassNode());
-		 boolean consistencyCheck = reasoner_object.isConsistent();
+		boolean consistencyCheck = reasoner_object.isConsistent();
 			    if (consistencyCheck) {
 			    	reasoner_object.precomputeInferences(InferenceType.CLASS_HIERARCHY,
 			            InferenceType.CLASS_ASSERTIONS, InferenceType.OBJECT_PROPERTY_HIERARCHY,
@@ -238,8 +265,10 @@ public class ReasonerComparison {
 			        OWLOntology inferredAxiomsOntology = manager.createOntology();
 			        //iog.fillOntology(df, inferredAxiomsOntology);
 			        
-		        	String path = "C:/";//filename.getParent();
-		        	String namefile = FilenameUtils.getName(file);
+		        	String path = ".";//filename.getParent();
+		        	// String namefile = FilenameUtils.getName(file);
+		        	SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd-HHmmss");
+		        	String namefile = sdf.format(new Date());
 		        			
 		        			//FilenameUtils.removeExtension(filename.getName());
 		        	//create main directory
@@ -269,7 +298,7 @@ public class ReasonerComparison {
 					            // We use the same format as for the input ontol4ogy.
 					        	OWLOntology singleGeneratorOntology = manager.createOntology();
 					        	singleGeneratorOntology.addAxioms(ax);
-					            manager.saveOntology(singleGeneratorOntology, outputStream);
+					            manager.saveOntology(singleGeneratorOntology, new TurtleDocumentFormat(), outputStream);
 					            inferredAxiomsOntology.addAxioms(ax);
 					            
 					        }
@@ -301,7 +330,7 @@ public class ReasonerComparison {
 			        // Now we create a stream since the ontology manager can then write to that stream.
 			        try (OutputStream outputStream = new FileOutputStream(inferredOntologyFile)) {
 			            // We use the same format as for the input ontology.
-			            manager.saveOntology(inferredAxiomsOntology, outputStream);
+			            manager.saveOntology(inferredAxiomsOntology, new TurtleDocumentFormat(), outputStream );
 			        }
 			        esito = "done "+ reasoner.toString();
 			        reasoner_object.dispose();
