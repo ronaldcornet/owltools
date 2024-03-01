@@ -68,7 +68,12 @@
 		<systemPath>${basedir}/ignazioFork_OWLlink_for_OWLAPI5.jar</systemPath>
 	</dependency>-->
 	
-
+	<!-- https://mvnrepository.com/artifact/au.csiro/snorocket-owlapi -->
+        <dependency>
+            <groupId>au.csiro</groupId>
+            <artifactId>snorocket-owlapi</artifactId>
+            <version>4.0.1</version>
+        </dependency>
 	
 	<dependency>
 	    <groupId>net.sourceforge.owlapi</groupId>
