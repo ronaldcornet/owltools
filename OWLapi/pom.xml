@@ -135,7 +135,7 @@
    <repository>
       <id>Central</id>
       <name>Central</name>
-      <url>https://repo1.maven.org/maven2/</url>
+      <url>https://mvnrepository.com/</url>
     </repository>
 	  
 </repositories>
