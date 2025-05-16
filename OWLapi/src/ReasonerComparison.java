@@ -327,7 +327,7 @@ public class ReasonerComparison {
 			        writer.close();
 			        
 			        
-			        System.out.println("numero inferred axioms "  + inferredAxiomsOntology.getAxiomCount());
+			        System.out.println("number of inferred axioms "  + inferredAxiomsOntology.getAxiomCount());
 			        File inferredOntologyFile = new File(mainDir,namefile+"_inferredBy_"+reasoner.toString()+".owl");
 			        System.out.println(inferredOntologyFile);
 			        // Now we create a stream since the ontology manager can then write to that stream.
@@ -335,7 +335,19 @@ public class ReasonerComparison {
 			            // We use the same format as for the input ontology.
 			            manager.saveOntology(inferredAxiomsOntology, new TurtleDocumentFormat(), outputStream );
 			        }
-			        esito = "done "+ reasoner.toString();
+				    
+			        File mergedOntologyFile = new File(mainDir,namefile+"_mergedWith_"+reasoner.toString()+".owl");
+			        System.out.println(mergedOntologyFile);
+				inferredAxiomsOntology.addAxioms(ontology.aboxAxioms(Imports.EXCLUDED));
+			        inferredAxiomsOntology.addAxioms(ontology.rboxAxioms(Imports.EXCLUDED));
+			        inferredAxiomsOntology.addAxioms(ontology.tboxAxioms(Imports.EXCLUDED));
+			        // Now we create a stream since the ontology manager can then write to that stream.
+			        try (OutputStream mergedoutputStream = new FileOutputStream(mergedOntologyFile)) {
+			            // We use the same format as for the input ontology.
+			            manager.saveOntology(inferredAxiomsOntology, new TurtleDocumentFormat(), outputStream );
+			        }
+
+				esito = "done "+ reasoner.toString();
 			        reasoner_object.dispose();
 			    } // End if consistencyCheck
 			    else {
