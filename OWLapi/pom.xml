@@ -9,6 +9,21 @@
 	  <owl-api.version>4.5.29</owl-api.version>
   </properties>
   <dependencies>
+	<!-- https://mvnrepository.com/artifact/net.sourceforge.owlapi/owlapi-osgidistribution -->
+	<dependency>
+    		<groupId>net.sourceforge.owlapi</groupId>
+    		<artifactId>owlapi-osgidistribution</artifactId>
+    		<version>${owl-api.version}</version>
+		<type>jar</type>
+	</dependency>
+	  
+	<dependency>
+	  <groupId>net.sourceforge.owlapi</groupId>
+	  <artifactId>owlapi-parent</artifactId>
+	  <version>${owl-api.version}</version>
+	  <type>pom</type>
+	</dependency>
+
 	<dependency>
     	<groupId>com.github.galigator.openllet</groupId>
     	<artifactId>openllet-owlapi</artifactId>
@@ -71,21 +86,6 @@
 		<scope>system</scope>
 		<systemPath>${basedir}/ignazioFork_OWLlink_for_OWLAPI5.jar</systemPath>
 	</dependency>-->
-
-	<!-- https://mvnrepository.com/artifact/net.sourceforge.owlapi/owlapi-osgidistribution -->
-	<dependency>
-    		<groupId>net.sourceforge.owlapi</groupId>
-    		<artifactId>owlapi-osgidistribution</artifactId>
-    		<version>${owl-api.version}</version>
-		<type>jar</type>
-	</dependency>
-	  
-	<dependency>
-	  <groupId>net.sourceforge.owlapi</groupId>
-	  <artifactId>owlapi-parent</artifactId>
-	  <version>${owl-api.version}</version>
-	  <type>pom</type>
-	</dependency>
 
 	<!-- https://mvnrepository.com/artifact/au.csiro/snorocket-owlapi -->
         <dependency>
