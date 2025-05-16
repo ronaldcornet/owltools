@@ -124,11 +124,13 @@
          <enabled>true</enabled>
       </snapshots>
    </repository>
+	  <!--
    <repository>
       <id>BBOP</id>
       <name>BBOP</name>
       <url>https://code.berkeleybop.org/maven/repository/</url>
     </repository>
+	  -->
 </repositories>
   <build>
     <sourceDirectory>src</sourceDirectory>
