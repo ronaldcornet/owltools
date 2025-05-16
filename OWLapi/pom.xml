@@ -92,6 +92,7 @@
             <groupId>au.csiro</groupId>
             <artifactId>snorocket-owlapi</artifactId>
             <version>4.0.1</version>
+	    <type>jar</type>
         </dependency>
 	  
 	<dependency>
