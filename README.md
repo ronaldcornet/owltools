@@ -9,11 +9,12 @@ Or easier: ```mvn clean assembly:assembly -DdescriptorId=jar-with-dependencies``
 Then run: ```java -Xmx4G -cp target/OWLapi-0.0.1-SNAPSHOT-jar-with-dependencies.jar ReasonerComparison <ontology file or URL> <reasoner>```  
 
 Reasoner Options:
-HERMIT
-PELLET
-JFACT
-ELK
-KONCLUDE
+* HERMIT
+* PELLET
+* JFACT
+* ELK
+* KONCLUDE
+* NONE
 
 ## Alternatives
 You might also consider [Robot Reasoning in python](https://robot.obolibrary.org/reason).
