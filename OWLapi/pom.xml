@@ -27,7 +27,7 @@
 	<dependency>
 	  <groupId>net.sourceforge.owlapi</groupId>
 	  <artifactId>owlapi-parent</artifactId>
-	  <version>4.5.20</version>
+	  <version>4.5.29</version>
 	  <type>pom</type>
 	</dependency>
 
