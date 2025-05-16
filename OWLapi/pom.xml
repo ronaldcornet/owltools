@@ -131,6 +131,13 @@
       <url>https://code.berkeleybop.org/maven/repository/</url>
     </repository>
 	  -->
+	  
+   <repository>
+      <id>Central</id>
+      <name>Central</name>
+      <url>https://repo1.maven.org/maven2/</url>
+    </repository>
+	  
 </repositories>
   <build>
     <sourceDirectory>src</sourceDirectory>
