@@ -24,21 +24,6 @@
 	  <version>2.0.0</version>
 	</dependency>
 
-	<!-- https://mvnrepository.com/artifact/net.sourceforge.owlapi/owlapi-osgidistribution -->
-	<dependency>
-    		<groupId>net.sourceforge.owlapi</groupId>
-    		<artifactId>owlapi-osgidistribution</artifactId>
-    		<version>4.5.29</version>
-		<type>jar</type>
-	</dependency>
-	  
-	<dependency>
-	  <groupId>net.sourceforge.owlapi</groupId>
-	  <artifactId>owlapi-parent</artifactId>
-	  <version>4.5.29</version>
-	  <type>pom</type>
-	</dependency>
-
 	<dependency>
 	    <groupId>net.sourceforge.owlapi</groupId>
 	    <artifactId>owllinkimpl</artifactId>
@@ -82,7 +67,22 @@
 		<scope>system</scope>
 		<systemPath>${basedir}/ignazioFork_OWLlink_for_OWLAPI5.jar</systemPath>
 	</dependency>-->
-	
+
+	<!-- https://mvnrepository.com/artifact/net.sourceforge.owlapi/owlapi-osgidistribution -->
+	<dependency>
+    		<groupId>net.sourceforge.owlapi</groupId>
+    		<artifactId>owlapi-osgidistribution</artifactId>
+    		<version>4.5.29</version>
+		<type>jar</type>
+	</dependency>
+	  
+	<dependency>
+	  <groupId>net.sourceforge.owlapi</groupId>
+	  <artifactId>owlapi-parent</artifactId>
+	  <version>4.5.29</version>
+	  <type>pom</type>
+	</dependency>
+
 	<!-- https://mvnrepository.com/artifact/au.csiro/snorocket-owlapi -->
         <dependency>
             <groupId>au.csiro</groupId>
