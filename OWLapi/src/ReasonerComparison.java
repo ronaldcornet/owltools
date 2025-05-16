@@ -97,7 +97,8 @@ public class ReasonerComparison {
 		JFACT,
 		FACT,
 		ELK,
-		SNOROCKET
+		SNOROCKET,
+		NONE
 		
 	}
 	public static String RunReasoner(Reasoner reasoner, String file) throws OWLOntologyCreationException, FileNotFoundException, IOException, OWLOntologyStorageException {
@@ -130,7 +131,7 @@ public class ReasonerComparison {
 		}*/
 	    
 	    File inputOntologyFile = new File(".","input.ttl");
-	    /*
+	    
 	    System.out.println("Saving as ttl to: " + inputOntologyFile);
 	    // Now we create a stream since the ontology manager can then write to that stream.
 	    try (OutputStream outputStream = new FileOutputStream(inputOntologyFile)) {
@@ -138,7 +139,7 @@ public class ReasonerComparison {
 	            manager.saveOntology(ontology, new TurtleDocumentFormat(), outputStream );
 	    }
 	    System.out.println("Saved as ttl");
-	    */
+	    
 
 	    System.out.println("axioms before reasoning: " +ontology.getAxiomCount());
 	    Set<OWLClass> classes = ontology.getClassesInSignature();
@@ -212,8 +213,10 @@ public class ReasonerComparison {
 			OWLReasonerConfiguration conf = new SimpleConfiguration(progressMonitor);
 			reasoner_object = OpenlletReasonerFactory.getInstance().createReasoner(ontology,conf);			
 		}
+		else if(reasoner == Reasoner.NONE) {
+		}
 		else{
-			esito = "Reasoner non valido";
+			esito = "Reasoner not valid";
 		}
 		System.out.println("UnsatisfiableClasses "+reasoner_object.getUnsatisfiableClasses().getSize());
 		System.out.println("TopClassNode "+reasoner_object.topClassNode());
