@@ -29,6 +29,7 @@
     		<groupId>net.sourceforge.owlapi</groupId>
     		<artifactId>owlapi-osgidistribution</artifactId>
     		<version>4.5.29</version>
+		<type>jar</version>
 	</dependency>
 	  
 	<dependency>
