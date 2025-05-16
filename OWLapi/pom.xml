@@ -4,6 +4,10 @@
   <artifactId>OWLapi</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>OWLapi</name>
+
+  <properties>
+	  <owl-api.version>4.5.29</owl-api.version>
+  </properties>
   <dependencies>
 	<dependency>
     	<groupId>com.github.galigator.openllet</groupId>
@@ -72,14 +76,14 @@
 	<dependency>
     		<groupId>net.sourceforge.owlapi</groupId>
     		<artifactId>owlapi-osgidistribution</artifactId>
-    		<version>4.5.29</version>
+    		<version>${owl-api.version}</version>
 		<type>jar</type>
 	</dependency>
 	  
 	<dependency>
 	  <groupId>net.sourceforge.owlapi</groupId>
 	  <artifactId>owlapi-parent</artifactId>
-	  <version>4.5.29</version>
+	  <version>${owl-api.version}</version>
 	  <type>pom</type>
 	</dependency>
 
